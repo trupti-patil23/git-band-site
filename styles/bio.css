@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "AvenirNext LT Pro";
+  /*border:1px solid red; /*Testing*/
+}
+
+/* Primary Colors */
+/* Secondary Colors */
+/*Tablet, Desktop breakpoint varibles*/
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../fonts/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../fonts/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../fonts/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/*  Added Mixins and media Queries for Tablet and 
+    Desktop breakpoints */
+/*  Added mixin for Font-Family */
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  gap: 1rem;
+  background-color: #323232;
+  /*For BandSite Logo*/
+}
+@media screen and (min-width: 768px) {
+  .header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #323232;
+    padding: 0.2rem 0 1rem 2.5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__logo-container {
+    width: 40%;
+  }
+}
+.header__logo {
+  width: 10rem;
+}
+
+/*For Navigation Bar(Biography, Shows)*/
+.nav {
+  width: 100%;
+  display: flex;
+}
+.nav__menu {
+  width: 50%;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.nav__menu:hover, .nav__menu:active {
+  border-bottom: 4px solid #FFFFFF;
+  color: red !important;
+  font-weight: bold !important;
+}
+@media screen and (min-width: 768px) {
+  .nav__menu {
+    width: 30%;
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+}
+.nav__title {
+  width: 100%;
+  text-decoration: none;
+  color: #E1E1E1;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  font-weight: 400;
+}/*# sourceMappingURL=bio.css.map */

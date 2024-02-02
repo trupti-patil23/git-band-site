@@ -1,0 +1,25 @@
+@use 'typography' as *;
+@use 'variables' as *;
+
+
+/*  Added Mixins and media Queries for Tablet and 
+    Desktop breakpoints */
+
+@mixin tablet {
+    @media screen and (min-width:$tablet-breakpoint) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width:$desktop-breakpoint) {
+        @content;
+    }
+}
+
+/*  Added mixin for Font-Family */
+@mixin get-font-family ($fontSize, $lineheight, $fontWeight) {
+    font-size: $fontSize;
+    line-height: $lineheight ;
+    font-weight: $fontWeight;
+}
