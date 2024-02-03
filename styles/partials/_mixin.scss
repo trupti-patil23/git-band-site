@@ -1,10 +1,10 @@
-@use 'typography' as *;
-@use 'variables' as *;
+@use '../partials/variables' as *;
+@use '../partials/typography' as *;
 
-
-/*  Added Mixins and media Queries for Tablet and 
-    Desktop breakpoints */
-
+/*------------------------------------------------------- 
+   Added Mixins and media Queries for Tablet and 
+    Desktop breakpoints 
+  -------------------------------------------------------*/
 @mixin tablet {
     @media screen and (min-width:$tablet-breakpoint) {
         @content;
@@ -17,9 +17,15 @@
     }
 }
 
-/*  Added mixin for Font-Family */
-@mixin get-font-family ($fontSize, $lineheight, $fontWeight) {
+/*-----------------------------------------------------------
+   Added common Mixins for Setting Fonts of Band-Site
+-----------------------------------------------------------*/
+@mixin set-font ($fontSize, $lineheight, $fontWeight) {
     font-size: $fontSize;
     line-height: $lineheight ;
     font-weight: $fontWeight;
+}
+
+@mixin set-Navigation-links-font {
+    @include set-font(1.2rem, 1.2rem, 400);
 }

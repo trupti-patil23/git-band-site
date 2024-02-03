@@ -1,38 +1,46 @@
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: 700;
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "AvenirNext LT Pro";
-  /*border:1px solid red; /*Testing*/
+  font-family: "AvenirNext";
 }
 
 /* Primary Colors */
 /* Secondary Colors */
+/*Font Weights*/
 /*Tablet, Desktop breakpoint varibles*/
-@font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("../../fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../fonts/AvenirNextLTPro-Demi.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("../../fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../fonts/AvenirNextLTPro-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "AvenirNext LT Pro";
-  src: url("../../fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../fonts/AvenirNextLTPro-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-/*  Added Mixins and media Queries for Tablet and 
-    Desktop breakpoints */
-/*  Added mixin for Font-Family */
+/* Mobile(m): For Padding */
+/* Desktop/Tablet(dt): For Padding */
+/*------------------------------------------------------- 
+   Added Mixins and media Queries for Tablet and 
+    Desktop breakpoints 
+  -------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added common Mixins for Setting Fonts of Band-Site
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added mixin for Setting Mobile Font Styling
+-----------------------------------------------------------*/
+/* Added mixin for Setting Tablet and Desktop Font Styling */
+/*-------------------------------------------------------------------------------
+    Added Selectors for Header, which includes styles for Mobile, Tablet 
+    and desktop
+  -------------------------------------------------------------------------------*/
 .header {
   width: 100%;
   display: flex;
@@ -73,9 +81,7 @@
   padding-bottom: 1rem;
 }
 .nav__menu:hover, .nav__menu:active {
-  border-bottom: 4px solid #FFFFFF;
-  color: red !important;
-  font-weight: bold !important;
+  border-bottom: 3px solid #FFFFFF;
 }
 @media screen and (min-width: 768px) {
   .nav__menu {
@@ -91,4 +97,45 @@
   font-size: 1.2rem;
   line-height: 1.2rem;
   font-weight: 400;
+}
+.nav__title--active:hover, .nav__title--active:active {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+/*-------------------------------------------------------------------------------
+    Added Selectors for Main , which includes styles for Mobile, Tablet 
+    and desktop. It has below sections:
+    a. Hero image and heading(The Bees Knees), b. About the music
+    c. Photo Gallery
+  -------------------------------------------------------------------------------*/
+/* SECTION:  Hero image and heading(The Bees Knees)*/
+.hero__container {
+  position: relative;
+  text-align: center;
+  height: 250px;
+}
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 50, 50, 0.5);
+  pointer-events: none;
+}
+.hero__image {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+}
+.hero__title {
+  position: absolute;
+  top: 45%;
+  padding-left: 1rem;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  /*@include set-font(24px,32px,700);   */
 }/*# sourceMappingURL=bio.css.map */

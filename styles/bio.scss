@@ -1,7 +1,13 @@
-@use 'partials/global' as *;
-@use 'partials/variables' as *;
-@use 'partials/mixin' as *;
+@use '../styles/partials/global' as *;
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixin' as *;
+@use '../styles/partials/mixin-mobile' as *;
+@use '../styles/partials/mixin-desktop-tablet' as *;
 
+/*-------------------------------------------------------------------------------
+    Added Selectors for Header, which includes styles for Mobile, Tablet 
+    and desktop
+  -------------------------------------------------------------------------------*/
 .header {
     width: 100%;
     display: flex;
@@ -44,9 +50,7 @@
 
         &:hover,
         &:active {
-            border-bottom: 4px solid $primary-white;
-            color: red !important;
-            font-weight: bold !important;
+            border-bottom: 3px solid $primary-white;
         }
 
         @include tablet {
@@ -60,6 +64,56 @@
         width: 100%;
         text-decoration: none;
         color: $secondary-mercury;
-        @include get-font-family(1.2rem, 1.2rem, 400);
+        @include set-Navigation-links-font;
+
+        &--active {
+
+            &:hover,
+            &:active {
+                color: $primary-white;
+                font-weight: $avenir-bold;
+            }
+        }
+    }
+}
+
+/*-------------------------------------------------------------------------------
+    Added Selectors for Main , which includes styles for Mobile, Tablet 
+    and desktop. It has below sections:
+    a. Hero image and heading(The Bees Knees), b. About the music
+    c. Photo Gallery
+  -------------------------------------------------------------------------------*/
+
+/* SECTION:  Hero image and heading(The Bees Knees)*/
+
+.hero {
+    &__container {
+        position: relative;
+        text-align: center;
+        height: 250px;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(50, 50, 50, 50%);
+        pointer-events: none;
+    }
+
+    &__image {
+        width: 100%;
+        height: 250px;
+        background-size: cover;
+    }
+
+    &__title {
+        position: absolute;
+        top: 45%;
+        padding-left: $m-padding-between;
+        color: $primary-white;
+        @include set-mobile-font("PageHeader");
     }
 }
