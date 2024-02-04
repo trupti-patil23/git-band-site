@@ -6,7 +6,7 @@ $primary-white: #FFFFFF;
 /* Secondary Colors */
 $secondary-dark-black: #000000;
 $secondary-mercury: #E1E1E1;
-$secondary-alabaster: #E1E1E1;
+$secondary-alabaster: #FAFAFA;
 
 /*Font Weights*/
 $avenir-regular: 400;
@@ -18,11 +18,11 @@ $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
 
 /* Mobile(m): For Padding */
-$m-padding-before-title: 1.5rem;
-$m-padding-after-title: 1rem;
-$m-padding-between: 1rem;
+$m-margin: 1.4rem;
+$m-padding-top: 2.3rem;
+$m-padding: 1rem;
 
 /* Desktop/Tablet(dt): For Padding */
-$dt-padding-before-title: 3rem;
-$dt-padding-after-title: 2.25rem;
-$dt-padding-between: 2.25rem;
+$dt-padding-top: 3rem;
+$dt-padding: 2.25rem;
+$dt-margin: 2.25rem; 

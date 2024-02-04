@@ -36,6 +36,10 @@
 /*-----------------------------------------------------------
    Added mixin for Setting Mobile Font Styling
 -----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added mixin for mobile padding styling for Band image 
+   and Photo Gallery image
+-----------------------------------------------------------*/
 /* Added mixin for Setting Tablet and Desktop Font Styling */
 /*-------------------------------------------------------------------------------
     Added Selectors for Header, which includes styles for Mobile, Tablet 
@@ -53,11 +57,8 @@
 }
 @media screen and (min-width: 768px) {
   .header {
-    width: 100%;
-    display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    background-color: #323232;
     padding: 0.2rem 0 1rem 2.5rem;
   }
 }
@@ -106,14 +107,15 @@
 /*-------------------------------------------------------------------------------
     Added Selectors for Main , which includes styles for Mobile, Tablet 
     and desktop. It has below sections:
-    a. Hero image and heading(The Bees Knees), b. About the music
+    a. Hero image and heading(The Bees Knees), 
+    b. About the musicians
     c. Photo Gallery
   -------------------------------------------------------------------------------*/
-/* SECTION:  Hero image and heading(The Bees Knees)*/
+/* SECTION a:  Hero image and heading(The Bees Knees)*/
 .hero__container {
   position: relative;
   text-align: center;
-  height: 250px;
+  height: 15.8rem;
 }
 .hero__overlay {
   position: absolute;
@@ -126,16 +128,151 @@
 }
 .hero__image {
   width: 100%;
-  height: 250px;
+  height: 15.8rem;
   background-size: cover;
 }
 .hero__title {
   position: absolute;
   top: 45%;
-  padding-left: 1rem;
+  padding-left: 1.4rem;
   color: #FFFFFF;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   line-height: 2rem;
-  font-weight: 700;
-  /*@include set-font(24px,32px,700);   */
+  font-weight: 600;
+}
+
+/*-------------------------------------------------------------------------------
+    section b. About the musicians :
+      Musicians title,image and information abt "The Bees knees" band -
+  -------------------------------------------------------------------------------*/
+.musician__title {
+  padding: 2.3rem 1.4rem 1rem 1.4rem;
+  font-size: 2.2rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: #323232;
+}
+.musician__image {
+  width: 100%;
+  height: 15rem;
+  padding: 0 1.4rem 1rem 1.4rem;
+}
+
+/* Added mdetails section for showing Musician's details */
+.mdetails {
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+  color: #323232;
+}
+.mdetails__header {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+.mdetails__sub-header {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  font-weight: 600;
+  padding-top: 2.3rem;
+  padding-bottom: 1rem;
+}
+.mdetails__sub-data {
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 1.1rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.mdetails__empty-line {
+  width: 100%;
+  height: 2rem;
+}
+
+/*-------------------------------------------------------------------------------
+    section c. Photo Gallery :
+      Added title(Photo Gallery) and 9 related images
+-------------------------------------------------------------------------------*/
+.gallery {
+  background-color: #FAFAFA;
+}
+.gallery__title {
+  padding: 2.3rem 1.4rem 1rem 1.4rem;
+  font-size: 2.2rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: #323232;
+}
+.gallery__image {
+  width: 100%;
+  height: 15rem;
+  padding: 0 1.4rem 1rem 1.4rem;
+}
+
+/*-------------------------------------------------------------------------------
+    Added "Footer" section of site
+-------------------------------------------------------------------------------*/
+.footer {
+  background-color: #323232;
+  color: #FFFFFF;
+  padding-top: 0.5rem;
+  padding-left: 1.4rem;
+}
+.footer__title {
+  padding: 2.3rem 1.4rem 1rem 0;
+  font-size: 2.2rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+.footer__icons {
+  padding-top: 0.7rem;
+  padding-bottom: 1.6rem;
+  display: flex;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  align-items: center;
+}
+.footer__instagram {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.footer__facebook {
+  width: 1.3rem;
+  height: 3.3rem;
+}
+.footer__twitter {
+  width: 2.4rem;
+  height: 2.6rem;
+}
+
+/*---Added fdetails section for showing (title,Address, email) for ----------
+  --The Bees Knees Management, Limitless Artist Group, ARCH Entertainment */
+.fdetails__title {
+  padding-bottom: 1.6rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+.fdetails__address {
+  padding-bottom: 1.5rem;
+  font-size: 1.2rem;
+  line-height: 2.3rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.fdetails__email {
+  font-size: 1.2rem;
+  line-height: 1.1rem;
+  font-weight: 400;
+  padding-bottom: 2.3rem;
+}
+
+/*Added copyright section for BandSite logo and copyright details */
+.copyright {
+  width: 100%;
+  height: 9.5rem;
+}
+.copyright__logo {
+  width: 10rem;
+  padding-top: 2.2rem;
+  padding-bottom: 1.5rem;
 }/*# sourceMappingURL=bio.css.map */
