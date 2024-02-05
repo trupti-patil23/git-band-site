@@ -19,10 +19,16 @@
 
     @include tablet {
         width: 100%;
-        height: 4rem;
+        height: 5rem;
         flex-direction: row;
         justify-content: flex-start;
         padding-left: $dt-margin;
+    }
+
+    @include desktop {
+        width: 100%;
+        height: 5rem;
+        padding-left: $desktop-margin;
     }
 
     /*For BandSite Logo*/
@@ -30,14 +36,15 @@
         @include tablet {
             width: 28%;
         }
+
+        @include desktop {
+            width: 15%;
+            padding-bottom: 0.4rem;
+        }
     }
 
     &__logo {
-        width: 10rem;
-
-        @include tablet {
-            width: 7rem;
-        }
+        width: 7rem;
     }
 }
 
@@ -51,6 +58,11 @@
         gap: 3rem;
         height: 3rem;
         align-content: end;
+    }
+
+    @include desktop {
+        gap: 2rem;
+        height: 4rem;
     }
 
     &__menu {
@@ -107,7 +119,11 @@
         height: $m-hero-image-height;
 
         @include tablet {
-            height: $dt-hero-image-height;
+            height: $t-hero-image-height;
+        }
+
+        @include desktop {
+            height: $d-hero-image-height;
         }
     }
 
@@ -127,7 +143,11 @@
         background-size: cover;
 
         @include tablet {
-            height: $dt-hero-image-height;
+            height: $t-hero-image-height;
+        }
+
+        @include desktop {
+            height: $d-hero-image-height;
         }
     }
 
@@ -140,7 +160,13 @@
 
         @include tablet {
             padding-left: $dt-margin;
+            top: 40%;
             @include set-desktop-tablet-font("PageHeader");
+        }
+
+        @include desktop {
+            padding-left: $desktop-margin;
+            top: 45%;
         }
     }
 }
@@ -160,13 +186,22 @@
             @include set-desktop-tablet-font("SectionHeader");
             padding-left: $dt-margin;
         }
+
+        @include desktop {
+            padding: $desktop-padding-top 0 1.8rem $desktop-margin;
+        }
     }
 
     &__image {
         @include mobile-padding-image;
+        padding-left: $m-margin;
 
         @include tablet {
-            @include desktop-tablet-hero-image;
+            @include tablet-hero-image;
+        }
+
+        @include desktop {
+            @include desktop-hero-image;
         }
     }
 }
@@ -182,6 +217,11 @@
         margin-left: 4.5rem;
     }
 
+    @include desktop {
+        width: 75%;
+        padding-left: 7rem;
+    }
+
     &__header {
         @include set-mobile-font("SectionHeader");
 
@@ -192,8 +232,15 @@
     }
 
     &__header-subline {
+        padding-top: 0.3rem;
+
         @include tablet {
             @include set-desktop-tablet-font("HeadSubline");
+        }
+
+        @include desktop {
+            padding-top: 1rem;
+            padding-bottom: 0.5rem;
         }
     }
 
@@ -206,12 +253,16 @@
             @include set-desktop-tablet-font("SubHeader");
             color: $secondary-dark-black;
         }
+
+        @include desktop {
+            padding-bottom: 1.5rem;
+        }
     }
 
     &__sub-data {
         color: $secondary-dark-black;
         @include set-mobile-font("BodyFont");
-        line-height: 1.4;
+        /*line-height: 1.4;*/
 
         @include tablet {
             display: flex;
@@ -219,11 +270,15 @@
             padding-bottom: 1.7rem;
             width: 110%;
         }
+
+        @include desktop {
+            width: 122%;
+        }
     }
 
     &__empty-line {
         width: 100%;
-        height: 2rem;
+        height: 1rem;
     }
 }
 
@@ -233,28 +288,36 @@
 -------------------------------------------------------------------------------*/
 .gallery {
     background-color: $secondary-alabaster;
+    padding-left: $m-margin;
 
     @include tablet {
         padding-bottom: 0.6rem;
+        padding-left: $dt-margin;
+    }
+
+    @include desktop {
+        padding-left: $desktop-margin;
     }
 
     &__container {
         @include tablet {
             display: flex;
             flex-direction: row;
-            padding-left: $dt-margin;
             flex-wrap: wrap;
         }
     }
 
     &__title {
-        padding: $m-padding-top $m-margin 1.3rem $m-margin;
+        padding: $m-padding-top $m-margin 1.3rem 0;
         @include set-mobile-font("PageHeader");
         color: $primary-black;
 
         @include tablet {
             @include set-desktop-tablet-font("SectionHeader");
-            padding-left: $dt-margin;
+        }
+
+        @include desktop {
+            @include set-desktop-tablet-font("SectionHeader");
         }
     }
 
@@ -262,7 +325,11 @@
         @include mobile-padding-image;
 
         @include tablet {
-            @include desktop-tablet-gallery-image;
+            @include tablet-gallery-image;
+        }
+
+        @include desktop {
+            @include desktop-gallery-image;
         }
     }
 }
@@ -279,6 +346,10 @@
     @include tablet {
         padding-left: $dt-margin;
         position: relative;
+    }
+
+    @include desktop {
+        padding-left: $desktop-margin;
     }
 
     &__container1 {
@@ -308,10 +379,10 @@
     }
 
     &__icons {
-        padding-top: 0.7rem;
-        padding-bottom: 1.6rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.7rem;
         display: flex;
-        column-gap: 3rem;
+        column-gap: 2rem;
         align-items: center;
 
         @include tablet {
@@ -323,33 +394,18 @@
     }
 
     &__instagram {
-        width: 2.2rem;
-        height: 2.2rem;
-
-        @include tablet {
-            width: 1.6rem;
-            height: 1.6rem;
-        }
+        width: 1.6rem;
+        height: 1.6rem;
     }
 
     &__facebook {
-        width: 1.3rem;
-        height: 3.3rem;
-
-        @include tablet {
-            width: 0.9rem;
-            height: 2.8rem;
-        }
+        width: 0.9rem;
+        height: 2.8rem;
     }
 
     &__twitter {
-        width: 2.4rem;
-        height: 2.6rem;
-
-        @include tablet {
-            width: 1.8rem;
-            height: 2.0rem;
-        }
+        width: 1.8rem;
+        height: 2.0rem;
     }
 }
 
@@ -357,7 +413,8 @@
   --The Bees Knees Management, Limitless Artist Group, ARCH Entertainment */
 .fdetails {
     &__title {
-        padding-bottom: 1.6rem;
+        padding-bottom: 1rem;
+        padding-top: 1.1rem;
         @include set-mobile-font("SubHeader");
 
         @include tablet {
@@ -366,7 +423,7 @@
     }
 
     &__address {
-        padding-bottom: 1.5rem;
+        padding-bottom: 1.2rem;
         @include set-mobile-font("FooterAddress");
         line-height: 1.5;
 
@@ -393,24 +450,34 @@
     height: 9.5rem;
 
     &__logo {
-        width: 10rem;
+        width: 7rem;
         padding-top: 2.2rem;
-        padding-bottom: 1.5rem;
+        padding-bottom: 0.8rem;
 
         @include tablet {
             position: absolute;
             left: 80%;
-            top: 1.4rem;
-            width: 15%;
+            top: 1.3rem;
+            width: 7rem;
+        }
+
+        @include desktop {
+            width: 9rem;
         }
     }
 
     &__copy {
+        @include set-mobile-font("FooterAddress");
+
         @include tablet {
             position: absolute;
             left: $dt-margin;
             top: 75%;
             @include set-desktop-tablet-font("FooterFont");
+        }
+
+        @include desktop {
+            left: $desktop-margin;
         }
     }
 }

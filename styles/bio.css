@@ -25,7 +25,8 @@
 /*Font Weights*/
 /*Tablet, Desktop breakpoint varibles*/
 /* Mobile(m): For Padding */
-/* Desktop/Tablet(dt): For Padding */
+/* Tablet(dt): For Padding */
+/*desktop: for padding*/
 /*Height of Hero image*/
 /*------------------------------------------------------- 
    Added Mixins and media Queries for Tablet and 
@@ -43,12 +44,16 @@
 -----------------------------------------------------------*/
 /* Added mixin for Setting Tablet and Desktop Font Styling */
 /*-----------------------------------------------------------
-   Added mixin for mobile padding styling for Band image 
-   and Photo Gallery image
+   Added mixin for styling  Tablet: Hero Image
 -----------------------------------------------------------*/
 /*-----------------------------------------------------------
-   Added mixin for mobile padding styling for Band image 
-   and Photo Gallery image
+   Added mixin for styling Tablet: Photo Gallery images
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added mixin for styling  Desktop: Hero Image
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added mixin for styling Tablet: Photo Gallery images
 -----------------------------------------------------------*/
 /*-------------------------------------------------------------------------------
     Added Selectors for Header, which includes styles for Mobile, Tablet 
@@ -67,10 +72,17 @@
 @media screen and (min-width: 768px) {
   .header {
     width: 100%;
-    height: 4rem;
+    height: 5rem;
     flex-direction: row;
     justify-content: flex-start;
     padding-left: 2.2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header {
+    width: 100%;
+    height: 5rem;
+    padding-left: 8rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -78,13 +90,14 @@
     width: 28%;
   }
 }
-.header__logo {
-  width: 10rem;
-}
-@media screen and (min-width: 768px) {
-  .header__logo {
-    width: 7rem;
+@media screen and (min-width: 1280px) {
+  .header__logo-container {
+    width: 15%;
+    padding-bottom: 0.4rem;
   }
+}
+.header__logo {
+  width: 7rem;
 }
 
 /*For Navigation Bar(Biography, Shows)*/
@@ -98,6 +111,12 @@
     gap: 3rem;
     height: 3rem;
     align-content: end;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .nav {
+    gap: 2rem;
+    height: 4rem;
   }
 }
 .nav__menu {
@@ -143,11 +162,16 @@
 .hero__container {
   position: relative;
   text-align: center;
-  height: 15.8rem;
+  height: 12rem;
 }
 @media screen and (min-width: 768px) {
   .hero__container {
     height: 28rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__container {
+    height: 40rem;
   }
 }
 .hero__overlay {
@@ -161,7 +185,7 @@
 }
 .hero__image {
   width: 100%;
-  height: 15.8rem;
+  height: 12rem;
   background-size: cover;
 }
 @media screen and (min-width: 768px) {
@@ -169,21 +193,33 @@
     height: 28rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero__image {
+    height: 40rem;
+  }
+}
 .hero__title {
   position: absolute;
   top: 45%;
   padding-left: 1.4rem;
   color: #FFFFFF;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   line-height: 2rem;
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .hero__title {
     padding-left: 2.2rem;
+    top: 40%;
     font-size: 3.5rem;
     line-height: 4.25rem;
     font-weight: 600;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    padding-left: 8rem;
+    top: 45%;
   }
 }
 
@@ -192,8 +228,8 @@
       Musicians title,image and information abt "The Bees knees" band -
   -------------------------------------------------------------------------------*/
 .musician__title {
-  padding: 2.5rem 1.4rem 1rem 1.4rem;
-  font-size: 2.2rem;
+  padding: 1.7rem 1.4rem 1rem 1.4rem;
+  font-size: 1.6rem;
   line-height: 2rem;
   font-weight: 600;
   color: #323232;
@@ -206,16 +242,30 @@
     padding-left: 2.2rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .musician__title {
+    padding: 2.7rem 0 1.8rem 8rem;
+  }
+}
 .musician__image {
   width: 100%;
-  height: 15rem;
-  padding: 0 1.4rem 1rem 1.4rem;
+  height: 11.5rem;
+  padding-bottom: 0.8rem;
+  padding-right: 1.1rem;
+  padding-left: 1.4rem;
 }
 @media screen and (min-width: 768px) {
   .musician__image {
     width: 81%;
     height: 20rem;
     margin-left: 4.3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .musician__image {
+    width: 75%;
+    height: 29.5rem;
+    margin-left: 10rem;
   }
 }
 
@@ -231,9 +281,15 @@
     margin-left: 4.5rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .mdetails {
+    width: 75%;
+    padding-left: 7rem;
+  }
+}
 .mdetails__header {
-  font-size: 1.3rem;
-  line-height: 2rem;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
@@ -244,6 +300,9 @@
     margin-top: 1rem;
   }
 }
+.mdetails__header-subline {
+  padding-top: 0.3rem;
+}
 @media screen and (min-width: 768px) {
   .mdetails__header-subline {
     font-size: 1.1rem;
@@ -251,11 +310,17 @@
     font-weight: 600;
   }
 }
+@media screen and (min-width: 1280px) {
+  .mdetails__header-subline {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+}
 .mdetails__sub-header {
-  font-size: 1.3rem;
-  line-height: 2rem;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
   font-weight: 600;
-  padding-top: 2.5rem;
+  padding-top: 1.7rem;
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
@@ -266,12 +331,17 @@
     color: #000000;
   }
 }
+@media screen and (min-width: 1280px) {
+  .mdetails__sub-header {
+    padding-bottom: 1.5rem;
+  }
+}
 .mdetails__sub-data {
   color: #000000;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   line-height: 1.1rem;
   font-weight: 400;
-  line-height: 1.4;
+  /*line-height: 1.4;*/
 }
 @media screen and (min-width: 768px) {
   .mdetails__sub-data {
@@ -283,9 +353,14 @@
     width: 110%;
   }
 }
+@media screen and (min-width: 1280px) {
+  .mdetails__sub-data {
+    width: 122%;
+  }
+}
 .mdetails__empty-line {
   width: 100%;
-  height: 2rem;
+  height: 1rem;
 }
 
 /*-------------------------------------------------------------------------------
@@ -294,23 +369,29 @@
 -------------------------------------------------------------------------------*/
 .gallery {
   background-color: #FAFAFA;
+  padding-left: 1.4rem;
 }
 @media screen and (min-width: 768px) {
   .gallery {
     padding-bottom: 0.6rem;
+    padding-left: 2.2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery {
+    padding-left: 8rem;
   }
 }
 @media screen and (min-width: 768px) {
   .gallery__container {
     display: flex;
     flex-direction: row;
-    padding-left: 2.2rem;
     flex-wrap: wrap;
   }
 }
 .gallery__title {
-  padding: 2.5rem 1.4rem 1.3rem 1.4rem;
-  font-size: 2.2rem;
+  padding: 1.7rem 1.4rem 1.3rem 0;
+  font-size: 1.6rem;
   line-height: 2rem;
   font-weight: 600;
   color: #323232;
@@ -320,19 +401,33 @@
     font-size: 2rem;
     line-height: 2.75rem;
     font-weight: 600;
-    padding-left: 2.2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery__title {
+    font-size: 2rem;
+    line-height: 2.75rem;
+    font-weight: 600;
   }
 }
 .gallery__image {
   width: 100%;
-  height: 15rem;
-  padding: 0 1.4rem 1rem 1.4rem;
+  height: 11.5rem;
+  padding-bottom: 0.8rem;
+  padding-right: 1.1rem;
 }
 @media screen and (min-width: 768px) {
   .gallery__image {
     width: 10rem;
     height: 9rem;
     padding: 0 1.5rem 1.5rem 0;
+    flex: 0 0 calc(33.33% - 10px);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery__image {
+    height: 13rem;
+    padding-bottom: 0 1.5rem 1.5rem 0;
     flex: 0 0 calc(33.33% - 10px);
   }
 }
@@ -352,6 +447,11 @@
     position: relative;
   }
 }
+@media screen and (min-width: 1280px) {
+  .footer {
+    padding-left: 8rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .footer__container1 {
     display: flex;
@@ -368,8 +468,8 @@
   }
 }
 .footer__title {
-  padding: 2.5rem 1.4rem 1rem 0;
-  font-size: 2.2rem;
+  padding: 1.7rem 1.4rem 1rem 0;
+  font-size: 1.6rem;
   line-height: 2rem;
   font-weight: 600;
 }
@@ -381,11 +481,11 @@
   }
 }
 .footer__icons {
-  padding-top: 0.7rem;
-  padding-bottom: 1.6rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.7rem;
   display: flex;
-  -moz-column-gap: 3rem;
-       column-gap: 3rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
   align-items: center;
 }
 @media screen and (min-width: 768px) {
@@ -398,42 +498,25 @@
   }
 }
 .footer__instagram {
-  width: 2.2rem;
-  height: 2.2rem;
-}
-@media screen and (min-width: 768px) {
-  .footer__instagram {
-    width: 1.6rem;
-    height: 1.6rem;
-  }
+  width: 1.6rem;
+  height: 1.6rem;
 }
 .footer__facebook {
-  width: 1.3rem;
-  height: 3.3rem;
-}
-@media screen and (min-width: 768px) {
-  .footer__facebook {
-    width: 0.9rem;
-    height: 2.8rem;
-  }
+  width: 0.9rem;
+  height: 2.8rem;
 }
 .footer__twitter {
-  width: 2.4rem;
-  height: 2.6rem;
-}
-@media screen and (min-width: 768px) {
-  .footer__twitter {
-    width: 1.8rem;
-    height: 2rem;
-  }
+  width: 1.8rem;
+  height: 2rem;
 }
 
 /*---Added fdetails section for showing (title,Address, email) for ----------
   --The Bees Knees Management, Limitless Artist Group, ARCH Entertainment */
 .fdetails__title {
-  padding-bottom: 1.6rem;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
+  padding-bottom: 1rem;
+  padding-top: 1.1rem;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
@@ -444,9 +527,9 @@
   }
 }
 .fdetails__address {
-  padding-bottom: 1.5rem;
-  font-size: 1.2rem;
-  line-height: 2.3rem;
+  padding-bottom: 1.2rem;
+  font-size: 0.7rem;
+  line-height: 1.1rem;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -458,7 +541,7 @@
   }
 }
 .fdetails__email {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   line-height: 1.1rem;
   font-weight: 400;
   padding-bottom: 2.3rem;
@@ -479,17 +562,27 @@
   height: 9.5rem;
 }
 .copyright__logo {
-  width: 10rem;
+  width: 7rem;
   padding-top: 2.2rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
 }
 @media screen and (min-width: 768px) {
   .copyright__logo {
     position: absolute;
     left: 80%;
-    top: 1.4rem;
-    width: 15%;
+    top: 1.3rem;
+    width: 7rem;
   }
+}
+@media screen and (min-width: 1280px) {
+  .copyright__logo {
+    width: 9rem;
+  }
+}
+.copyright__copy {
+  font-size: 0.7rem;
+  line-height: 1.1rem;
+  font-weight: 400;
 }
 @media screen and (min-width: 768px) {
   .copyright__copy {
@@ -499,5 +592,10 @@
     font-size: 0.9rem;
     line-height: 1.25rem;
     font-weight: 400;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .copyright__copy {
+    left: 8rem;
   }
 }/*# sourceMappingURL=bio.css.map */

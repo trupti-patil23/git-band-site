@@ -42,22 +42,40 @@
 }
 
 /*-----------------------------------------------------------
-   Added mixin for mobile padding styling for Band image 
-   and Photo Gallery image
+   Added mixin for styling  Tablet: Hero Image
 -----------------------------------------------------------*/
-@mixin desktop-tablet-hero-image {
+@mixin tablet-hero-image {
     width: 81%;
     height: 20rem;   
     margin-left: 4.3rem;
 }
 
 /*-----------------------------------------------------------
-   Added mixin for mobile padding styling for Band image 
-   and Photo Gallery image
+   Added mixin for styling Tablet: Photo Gallery images
 -----------------------------------------------------------*/
-@mixin desktop-tablet-gallery-image {
+@mixin tablet-gallery-image {
     width: 10rem;
     height: 9rem;   
     padding: 0 1.5rem 1.5rem 0; 
     flex: 0 0 calc(33.33% - 10px);   
 }
+
+/*-----------------------------------------------------------
+   Added mixin for styling  Desktop: Hero Image
+-----------------------------------------------------------*/
+@mixin desktop-hero-image { 
+    width: 75%;
+    height: 29.5rem;
+    margin-left: 10rem;
+}
+
+/*-----------------------------------------------------------
+   Added mixin for styling Tablet: Photo Gallery images
+-----------------------------------------------------------*/
+@mixin desktop-gallery-image {
+    height: 13rem;   
+    padding-bottom: 0 1.5rem 1.5rem 0; 
+    flex: 0 0 calc(33.33% - 10px);   
+}
+
+

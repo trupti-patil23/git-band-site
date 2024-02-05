@@ -19,15 +19,18 @@ $desktop-breakpoint: 1280px;
 
 /* Mobile(m): For Padding */
 $m-margin: 1.4rem;
-$m-padding-top: 2.5rem;
+$m-padding-top: 1.7rem;
 $m-padding: 1rem;
 
-/* Desktop/Tablet(dt): For Padding */
-$dt-padding-top: 3rem;
+/* Tablet(dt): For Padding */
 $dt-padding: 2.8rem;
 $dt-margin: 2.2rem;
 
+/*desktop: for padding*/
+$desktop-margin: 8rem;
+$desktop-padding-top: 2.7rem;
 
 /*Height of Hero image*/
-$m-hero-image-height:15.8rem;
-$dt-hero-image-height:28rem;
+$m-hero-image-height: 12rem;
+$t-hero-image-height: 28rem;
+$d-hero-image-height: 40rem;
