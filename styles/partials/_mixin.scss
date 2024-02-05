@@ -25,7 +25,3 @@
     line-height: $lineheight ;
     font-weight: $fontWeight;
 }
-
-@mixin set-Navigation-links-font {
-    @include set-font(1.2rem, 1.2rem, 400);
-}

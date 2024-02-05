@@ -26,6 +26,7 @@
 /*Tablet, Desktop breakpoint varibles*/
 /* Mobile(m): For Padding */
 /* Desktop/Tablet(dt): For Padding */
+/*Height of Hero image*/
 /*------------------------------------------------------- 
    Added Mixins and media Queries for Tablet and 
     Desktop breakpoints 
@@ -41,6 +42,14 @@
    and Photo Gallery image
 -----------------------------------------------------------*/
 /* Added mixin for Setting Tablet and Desktop Font Styling */
+/*-----------------------------------------------------------
+   Added mixin for mobile padding styling for Band image 
+   and Photo Gallery image
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added mixin for mobile padding styling for Band image 
+   and Photo Gallery image
+-----------------------------------------------------------*/
 /*-------------------------------------------------------------------------------
     Added Selectors for Header, which includes styles for Mobile, Tablet 
     and desktop
@@ -57,18 +66,25 @@
 }
 @media screen and (min-width: 768px) {
   .header {
+    width: 100%;
+    height: 4rem;
     flex-direction: row;
     justify-content: flex-start;
-    padding: 0.2rem 0 1rem 2.5rem;
+    padding-left: 2.2rem;
   }
 }
 @media screen and (min-width: 768px) {
   .header__logo-container {
-    width: 40%;
+    width: 28%;
   }
 }
 .header__logo {
   width: 10rem;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    width: 7rem;
+  }
 }
 
 /*For Navigation Bar(Biography, Shows)*/
@@ -76,32 +92,44 @@
   width: 100%;
   display: flex;
 }
+@media screen and (min-width: 768px) {
+  .nav {
+    width: 100%;
+    gap: 3rem;
+    height: 3rem;
+    align-content: end;
+  }
+}
 .nav__menu {
   width: 50%;
   text-align: center;
   padding-bottom: 1rem;
 }
-.nav__menu:hover, .nav__menu:active {
+.nav__menu:active, .nav__menu:hover {
   border-bottom: 3px solid #FFFFFF;
 }
 @media screen and (min-width: 768px) {
   .nav__menu {
-    width: 30%;
-    text-align: left;
-    margin-top: 0.5rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-top: 1rem;
   }
 }
-.nav__title {
+.nav__item {
   width: 100%;
   text-decoration: none;
   color: #E1E1E1;
-  font-size: 1.2rem;
-  line-height: 1.2rem;
-  font-weight: 400;
 }
-.nav__title--active:hover, .nav__title--active:active {
+@media screen and (min-width: 768px) {
+  .nav__item {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: 400;
+  }
+}
+.nav__item--active:active, .nav__item--active:hover {
   color: #FFFFFF;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /*-------------------------------------------------------------------------------
@@ -117,6 +145,11 @@
   text-align: center;
   height: 15.8rem;
 }
+@media screen and (min-width: 768px) {
+  .hero__container {
+    height: 28rem;
+  }
+}
 .hero__overlay {
   position: absolute;
   top: 0;
@@ -131,6 +164,11 @@
   height: 15.8rem;
   background-size: cover;
 }
+@media screen and (min-width: 768px) {
+  .hero__image {
+    height: 28rem;
+  }
+}
 .hero__title {
   position: absolute;
   top: 45%;
@@ -140,22 +178,45 @@
   line-height: 2rem;
   font-weight: 600;
 }
+@media screen and (min-width: 768px) {
+  .hero__title {
+    padding-left: 2.2rem;
+    font-size: 3.5rem;
+    line-height: 4.25rem;
+    font-weight: 600;
+  }
+}
 
 /*-------------------------------------------------------------------------------
     section b. About the musicians :
       Musicians title,image and information abt "The Bees knees" band -
   -------------------------------------------------------------------------------*/
 .musician__title {
-  padding: 2.3rem 1.4rem 1rem 1.4rem;
+  padding: 2.5rem 1.4rem 1rem 1.4rem;
   font-size: 2.2rem;
   line-height: 2rem;
   font-weight: 600;
   color: #323232;
 }
+@media screen and (min-width: 768px) {
+  .musician__title {
+    font-size: 2rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+    padding-left: 2.2rem;
+  }
+}
 .musician__image {
   width: 100%;
   height: 15rem;
   padding: 0 1.4rem 1rem 1.4rem;
+}
+@media screen and (min-width: 768px) {
+  .musician__image {
+    width: 81%;
+    height: 20rem;
+    margin-left: 4.3rem;
+  }
 }
 
 /* Added mdetails section for showing Musician's details */
@@ -164,17 +225,46 @@
   padding-right: 1.4rem;
   color: #323232;
 }
+@media screen and (min-width: 768px) {
+  .mdetails {
+    width: 80%;
+    margin-left: 4.5rem;
+  }
+}
 .mdetails__header {
   font-size: 1.3rem;
   line-height: 2rem;
   font-weight: 600;
 }
+@media screen and (min-width: 768px) {
+  .mdetails__header {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mdetails__header-subline {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    font-weight: 600;
+  }
+}
 .mdetails__sub-header {
   font-size: 1.3rem;
   line-height: 2rem;
   font-weight: 600;
-  padding-top: 2.3rem;
+  padding-top: 2.5rem;
   padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .mdetails__sub-header {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: #000000;
+  }
 }
 .mdetails__sub-data {
   color: #000000;
@@ -182,6 +272,16 @@
   line-height: 1.1rem;
   font-weight: 400;
   line-height: 1.4;
+}
+@media screen and (min-width: 768px) {
+  .mdetails__sub-data {
+    display: flex;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+    padding-bottom: 1.7rem;
+    width: 110%;
+  }
 }
 .mdetails__empty-line {
   width: 100%;
@@ -195,17 +295,46 @@
 .gallery {
   background-color: #FAFAFA;
 }
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding-bottom: 0.6rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .gallery__container {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2.2rem;
+    flex-wrap: wrap;
+  }
+}
 .gallery__title {
-  padding: 2.3rem 1.4rem 1rem 1.4rem;
+  padding: 2.5rem 1.4rem 1.3rem 1.4rem;
   font-size: 2.2rem;
   line-height: 2rem;
   font-weight: 600;
   color: #323232;
 }
+@media screen and (min-width: 768px) {
+  .gallery__title {
+    font-size: 2rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+    padding-left: 2.2rem;
+  }
+}
 .gallery__image {
   width: 100%;
   height: 15rem;
   padding: 0 1.4rem 1rem 1.4rem;
+}
+@media screen and (min-width: 768px) {
+  .gallery__image {
+    width: 10rem;
+    height: 9rem;
+    padding: 0 1.5rem 1.5rem 0;
+    flex: 0 0 calc(33.33% - 10px);
+  }
 }
 
 /*-------------------------------------------------------------------------------
@@ -217,11 +346,39 @@
   padding-top: 0.5rem;
   padding-left: 1.4rem;
 }
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-left: 2.2rem;
+    position: relative;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__container1 {
+    display: flex;
+    flex-direction: row;
+    gap: 2.3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 3rem;
+  }
+}
 .footer__title {
-  padding: 2.3rem 1.4rem 1rem 0;
+  padding: 2.5rem 1.4rem 1rem 0;
   font-size: 2.2rem;
   line-height: 2rem;
   font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .footer__title {
+    font-size: 2rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+  }
 }
 .footer__icons {
   padding-top: 0.7rem;
@@ -231,17 +388,44 @@
        column-gap: 3rem;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .footer__icons {
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+}
 .footer__instagram {
   width: 2.2rem;
   height: 2.2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__instagram {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
 }
 .footer__facebook {
   width: 1.3rem;
   height: 3.3rem;
 }
+@media screen and (min-width: 768px) {
+  .footer__facebook {
+    width: 0.9rem;
+    height: 2.8rem;
+  }
+}
 .footer__twitter {
   width: 2.4rem;
   height: 2.6rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__twitter {
+    width: 1.8rem;
+    height: 2rem;
+  }
 }
 
 /*---Added fdetails section for showing (title,Address, email) for ----------
@@ -252,6 +436,13 @@
   line-height: 1.5rem;
   font-weight: 600;
 }
+@media screen and (min-width: 768px) {
+  .fdetails__title {
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+  }
+}
 .fdetails__address {
   padding-bottom: 1.5rem;
   font-size: 1.2rem;
@@ -259,11 +450,27 @@
   font-weight: 400;
   line-height: 1.5;
 }
+@media screen and (min-width: 768px) {
+  .fdetails__address {
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+}
 .fdetails__email {
   font-size: 1.2rem;
   line-height: 1.1rem;
   font-weight: 400;
   padding-bottom: 2.3rem;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .fdetails__email {
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
 }
 
 /*Added copyright section for BandSite logo and copyright details */
@@ -275,4 +482,22 @@
   width: 10rem;
   padding-top: 2.2rem;
   padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .copyright__logo {
+    position: absolute;
+    left: 80%;
+    top: 1.4rem;
+    width: 15%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .copyright__copy {
+    position: absolute;
+    left: 2.2rem;
+    top: 75%;
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
 }/*# sourceMappingURL=bio.css.map */

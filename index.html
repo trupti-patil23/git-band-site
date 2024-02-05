@@ -16,16 +16,18 @@
     <header class="header">
         <!--BandSite Logo-->
         <div class="header__logo-container">
-            <img class="header__logo" src="./assets/logos/Logo-bandsite.svg" />
+            <a href="./index.html">
+                <img class="header__logo" src="./assets/logos/Logo-bandsite.svg" />
+            </a>
         </div>
 
         <!--Navigation Bar : Biography, Shows-->
         <nav class="nav">
             <div class="nav__menu">
-                <a href="./index.html" class="nav__title nav__title--active">Biography</a>
+                <a href="./index.html" class="nav__item nav__item--active">Biography</a>
             </div>
             <div class="nav__menu">
-                <a href="#" class="nav__title nav__title--active">Shows</a>
+                <a href="#" class="nav__item nav__item--active">Shows</a>
             </div>
         </nav>
     </header>
@@ -55,7 +57,8 @@
             <div class="mdetails">
                 <div class="mdetails__header">“We push each other to be the best. It’s not uncommon for one of us to
                     say ‘this needs to be better,
-                    back to the drawing board’”<p> - Lead vocalist of The Bees Knees</p>
+                    back to the drawing board’”<p class="mdetails__header-subline"> - Lead vocalist of The Bees Knees
+                    </p>
                 </div>
                 <div class="mdetails__sub-header">The Bees Knees</div>
                 <div class="mdetails__sub-data">
@@ -85,64 +88,81 @@
 
             <div class="gallery">
                 <div class="gallery__title">Photo Gallery</div>
-                <img class="gallery__image" alt="PhotoGalleryImage" src="./assets/images/Photo-gallery-1.jpg" />
-                <img class="gallery__image" alt="PhotoGalleryImage" src="./assets/images/Photo-gallery-2.jpg" />
-                <img class="gallery__image" alt="PhotoGalleryImage" src="./assets/images/Photo-gallery-3.jpg" />
-                <img class="gallery__image" alt="PhotoGalleryImage" src="./assets/images/Photo-gallery-4.jpg" />
-                <img class="gallery__image" alt="PhotoGalleryImage" src="./assets/images/Photo-gallery-5.jpg" />
-                <img class="gallery__image" alt="PhotoGalleryImage" src="./assets/images/Photo-gallery-6.jpg" />
-                <img class="gallery__image" alt="PhotoGalleryImage" src="./assets/images/Photo-gallery-7.jpg" />
-                <img class="gallery__image" alt="PhotoGalleryImage" src="./assets/images/Photo-gallery-8.jpg" />
-                <img class="gallery__image" alt="PhotoGalleryImage" src="./assets/images/Photo-gallery-9.jpg" />
+                <div class="gallery__container">
+
+                    <img class="gallery__image" alt="PhotoGalleryImage" src="./assets/images/Photo-gallery-1.jpg" />
+                    <img class="gallery__image" alt="PhotoGalleryImage" src="./assets/images/Photo-gallery-2.jpg" />
+                    <img class="gallery__image" alt="PhotoGalleryImage" src="./assets/images/Photo-gallery-3.jpg" />
+
+
+                    <img class="gallery__image" alt="PhotoGalleryImage" src="./assets/images/Photo-gallery-4.jpg" />
+                    <img class="gallery__image" alt="PhotoGalleryImage" src="./assets/images/Photo-gallery-5.jpg" />
+                    <img class="gallery__image" alt="PhotoGalleryImage" src="./assets/images/Photo-gallery-6.jpg" />
+
+                    <img class="gallery__image" alt="PhotoGalleryImage" src="./assets/images/Photo-gallery-7.jpg" />
+                    <img class="gallery__image" alt="PhotoGalleryImage" src="./assets/images/Photo-gallery-8.jpg" />
+                    <img class="gallery__image" alt="PhotoGalleryImage" src="./assets/images/Photo-gallery-9.jpg" />
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <!--Title-->
-        <div class="footer__title">Get in Touch</div>
+        <div class="footer__container1">
+            <!--Title-->
+            <div class="footer__title">Get in Touch</div>
 
-        <!--Instagram, Facebook, Twitter icons-->
-        <div class="footer__icons">
-            <a href="https://www.instagram.com/">
-                <img class="footer__instagram" src="./assets/icons/SVG/Icon-instagram.svg" alt="instagram">
-            </a>
-            <a href="https://www.facebook.com/">
-                <img class="footer__facebook" src="./assets/icons/SVG/Icon-facebook.svg" alt="facebook">
-            </a>
-            <a href="https://twitter.com/">
-                <img class="footer__twitter" src="./assets/icons/SVG/Icon-twitter.svg" alt="twitter">
-            </a>
+            <!--Instagram, Facebook, Twitter icons-->
+            <div class="footer__icons">
+                <a href="https://www.instagram.com/">
+                    <img class="footer__instagram" src="./assets/icons/SVG/Icon-instagram.svg" alt="instagram">
+                </a>
+                <a href="https://www.facebook.com/">
+                    <img class="footer__facebook" src="./assets/icons/SVG/Icon-facebook.svg" alt="facebook">
+                </a>
+                <a href="https://twitter.com/">
+                    <img class="footer__twitter" src="./assets/icons/SVG/Icon-twitter.svg" alt="twitter">
+                </a>
+            </div>
         </div>
 
-        <!--The Bees Knees Management-->
-        <div class="fdetails">
-            <div class="fdetails__title">The Bees Knees Management</div>
-            <div class="fdetails__address">
-                <p>503 Broadway Penthouse,</p>
-                <p>New York, NY 10012, USA</p>
+        <div class="footer__container2">
+            <!--The Bees Knees Management-->
+            <div class="fdetails">
+                <div class="fdetails__title">The Bees Knees Management</div>
+                <div class="fdetails__address">
+                    <p>503 Broadway Penthouse,</p>
+                    <p>New York, NY 10012, USA</p>
+                </div>
+                <div>
+                    <a class="fdetails__email" href="mailto:info@thebeesknees.com"> info@thebeesknees.com</a>
+                </div>
             </div>
-            <div class="fdetails__email">info@thebeesknees.com</div>
-        </div>
 
-        <!--Limitless Artist Group-->
-        <div class="fdetails">
-            <div class="fdetails__title">Limitless Artist Group</div>
-            <div class="fdetails__address">
-                <p>Booking Agent for</p>
-                <p>US / South America / Japan</p>
+            <!--Limitless Artist Group-->
+            <div class="fdetails">
+                <div class="fdetails__title">Limitless Artist Group</div>
+                <div class="fdetails__address">
+                    <p>Booking Agent for</p>
+                    <p>US / South America / Japan</p>
+                </div>
+                <div>
+                    <a class="fdetails__email" href="mailto:bookings@limitlessag.com">bookings@limitlessag.com</a>
+                </div>
             </div>
-            <div class="fdetails__email">bookings@limitlessag.com</div>
-        </div>
 
-        <!-- ARCH Entertainment-->
-        <div class="fdetails">
-            <div class="fdetails__title">ARCH Entertainment</div>
-            <div class="fdetails__address">
-                <p>Booking Agent for</p>
-                <p>UK / EU / AU</p>
+            <!-- ARCH Entertainment-->
+            <div class="fdetails">
+                <div class="fdetails__title">ARCH Entertainment</div>
+                <div class="fdetails__address">
+                    <p>Booking Agent for</p>
+                    <p>UK / EU / AU</p>
+                </div>
+                <div>
+                    <a class="fdetails__email"
+                        href="mailto:bookings@archentertainment.com">bookings@archentertainment.com</a>
+                </div>
             </div>
-            <div class="fdetails__email">bookings@archentertainment.com</div>
         </div>
 
         <div class="copyright">

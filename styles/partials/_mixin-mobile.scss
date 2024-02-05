@@ -29,18 +29,15 @@
     @if($type =="FooterEmail") {
         @include set-font(1.2rem, 1.1rem, 400);
     }
-
-    @if($type =="LabelButtonFont") {
-        @include set-font(0.6rem, 1.25rem, 700);
-    }
 }
 
 /*-----------------------------------------------------------
    Added mixin for mobile padding styling for Band image 
    and Photo Gallery image
 -----------------------------------------------------------*/
-@mixin set-mobile-padding-image {
+@mixin mobile-padding-image {
     width: 100%;
     height: 15rem;
-    padding: 0 $m-margin $m-padding $m-margin;
+    padding: 0 $m-margin $m-padding $m-margin; 
 }
+

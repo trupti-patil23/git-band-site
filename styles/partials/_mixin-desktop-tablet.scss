@@ -1,18 +1,27 @@
 @use "../partials/mixin" as *;
+@use '../partials/variables' as *;
 
 /* Added mixin for Setting Tablet and Desktop Font Styling */
 @mixin set-desktop-tablet-font($type) {
 
     @if($type =="PageHeader") {
-        @include set-font(3.75rem, 4.25rem, 700);
+        @include set-font(3.50rem, 4.25rem, 600);           
     }
 
     @if($type =="SectionHeader") {
-        @include set-font(2.25rem, 2.75rem, 700);
+        @include set-font(2rem, 2.75rem, 600);
     }
 
     @if($type =="SubHeader") {
-        @include set-font(1.5rem, 2rem, 600);
+        @include set-font(1.4rem, 2rem, 600);
+    }
+
+    @if($type =="HeadLine") {
+        @include set-font(1.4rem, 2rem, 600);
+    }
+
+    @if($type =="HeadSubline") {
+        @include set-font(1.1rem, 1.6rem, 600);
     }
 
     @if($type =="BodyFont") {
@@ -23,7 +32,32 @@
         @include set-font(0.9rem, 1.25rem, 400);
     }
 
-    @if($type =="LabelButtonFont") {
-        @include set-font(0.75rem, 1.25rem, 700);
+    @if($type =="FooterDemiFont") {
+        @include set-font(0.9rem, 1.25rem, 600);
     }
+
+    @if($type =="NavigationMenu") {
+        @include set-font(1rem, 1.2rem, 400);       
+    }
+}
+
+/*-----------------------------------------------------------
+   Added mixin for mobile padding styling for Band image 
+   and Photo Gallery image
+-----------------------------------------------------------*/
+@mixin desktop-tablet-hero-image {
+    width: 81%;
+    height: 20rem;   
+    margin-left: 4.3rem;
+}
+
+/*-----------------------------------------------------------
+   Added mixin for mobile padding styling for Band image 
+   and Photo Gallery image
+-----------------------------------------------------------*/
+@mixin desktop-tablet-gallery-image {
+    width: 10rem;
+    height: 9rem;   
+    padding: 0 1.5rem 1.5rem 0; 
+    flex: 0 0 calc(33.33% - 10px);   
 }
