@@ -335,12 +335,115 @@
 }
 
 /*-------------------------------------------------------------------------------
-    Added "Footer" section of site
+    Added "Join the Conversation" section 
+-------------------------------------------------------------------------------*/
+.conversation {
+    margin: $m-margin;
+
+    &__title {
+        @include set-mobile-font("PageHeader");
+        color: $primary-black;
+    }
+
+    &__container {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__image {
+       margin-top: $m-padding-top;
+       @include set-coversation-image-style("Mobile");
+    }
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__button {
+        @include set-button-style("Mobile");
+        margin: 1rem 0;
+    }
+
+    &__label {
+        margin: 4px;
+        color: $primary-silver;
+        @include set-mobile-font("LabelFont");
+    }
+
+    &__name {
+        height: 2.25rem;
+        @include set-form-feilds-style;   
+        
+        &--error {
+            border: 1px solid $error-state-color;
+        }
+    }
+
+    &__comment {
+        height: 5.5rem;
+        @include set-form-feilds-style;
+        
+        &--error {
+            border: 1px solid $error-state-color;
+        }
+    }
+}
+
+.comment {
+    margin-bottom: 1rem;
+    &__item{        
+        list-style-type: none;
+    }
+    &__divider{
+        border: 1px solid $secondary-mercury;             
+    }
+
+    &__main-container{        
+        display:flex;        
+        gap:1rem;
+    }
+
+    &__item-image{
+        @include set-coversation-image-style("Mobile");
+        background-color: $secondary-mercury; 
+        margin-top: 1rem;   
+    }
+
+    &__sub-container {
+        display:flex;  
+        flex-direction: column; 
+        width:80%;
+        margin: 1rem 0;   
+        gap: 0.6rem;
+    }
+
+    &__row {
+        display:flex;  
+        justify-content: space-between;   
+    }
+
+    &__item-name{
+        @include set-mobile-font("SubHeader");
+    }
+
+    &__item-date{
+        @include set-mobile-font("SubHeader");
+        color:$secondary-mercury;
+    }
+
+    &__item-comment{
+        @include set-mobile-font("BodyFont");
+    }
+}
+
+/*-------------------------------------------------------------------------------
+    Added "Footer" section of site 
 -------------------------------------------------------------------------------*/
 .footer {
     background-color: $primary-black;
     color: $primary-white;
-    padding-top: 0.5rem;
     padding-left: $m-margin;
 
     @include tablet {
@@ -370,7 +473,7 @@
     }
 
     &__title {
-        padding: $m-padding-top $m-margin $m-padding 0;
+        padding: $m-padding-top $m-margin 0 0;
         @include set-mobile-font("PageHeader");
 
         @include tablet {
@@ -380,7 +483,6 @@
 
     &__icons {
         padding-top: 0.3rem;
-        padding-bottom: 0.7rem;
         display: flex;
         column-gap: 2rem;
         align-items: center;
@@ -414,7 +516,7 @@
 .fdetails {
     &__title {
         padding-bottom: 1rem;
-        padding-top: 1.1rem;
+        padding-top: 1rem;
         @include set-mobile-font("SubHeader");
 
         @include tablet {
@@ -423,8 +525,8 @@
     }
 
     &__address {
-        padding-bottom: 1.2rem;
-        @include set-mobile-font("FooterAddress");
+        padding-bottom: 1rem;
+        @include set-mobile-font("FooterFont");
         line-height: 1.5;
 
         @include tablet {
@@ -433,7 +535,7 @@
     }
 
     &__email {
-        @include set-mobile-font("FooterEmail");
+        @include set-mobile-font("FooterFont");
         padding-bottom: 2.3rem;
         text-decoration: none;
         color: $primary-white;
@@ -447,11 +549,11 @@
 /*Added copyright section for BandSite logo and copyright details */
 .copyright {
     width: 100%;
-    height: 9.5rem;
+    height: 8rem;
 
     &__logo {
         width: 7rem;
-        padding-top: 2.2rem;
+        padding-top: 2.8rem;
         padding-bottom: 0.8rem;
 
         @include tablet {
@@ -467,7 +569,7 @@
     }
 
     &__copy {
-        @include set-mobile-font("FooterAddress");
+        @include set-mobile-font("FooterFont");
 
         @include tablet {
             position: absolute;

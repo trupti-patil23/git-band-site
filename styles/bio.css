@@ -15,9 +15,15 @@
 }
 * {
   box-sizing: border-box;
+}
+
+body {
   margin: 0;
-  padding: 0;
-  font-family: "AvenirNext";
+  font-family: "AvenirNext", sans-serif;
+}
+
+input, button, select, textarea {
+  font-family: inherit; /* Inherits font from parent (body) */
 }
 
 /* Primary Colors */
@@ -34,6 +40,16 @@
   -------------------------------------------------------*/
 /*-----------------------------------------------------------
    Added common Mixins for Setting Fonts of Band-Site
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added common Mixins for Setting styling Button for site
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added common Mixins for styling textbox and Textarea
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added common Mixins for styling images in 
+   "Join the Conversation" section
 -----------------------------------------------------------*/
 /*-----------------------------------------------------------
    Added mixin for Setting Mobile Font Styling
@@ -201,7 +217,7 @@
 .hero__title {
   position: absolute;
   top: 45%;
-  padding-left: 1.4rem;
+  padding-left: 1rem;
   color: #FFFFFF;
   font-size: 1.6rem;
   line-height: 2rem;
@@ -228,7 +244,7 @@
       Musicians title,image and information abt "The Bees knees" band -
   -------------------------------------------------------------------------------*/
 .musician__title {
-  padding: 1.7rem 1.4rem 1rem 1.4rem;
+  padding: 1.5rem 1rem 1rem 1rem;
   font-size: 1.6rem;
   line-height: 2rem;
   font-weight: 600;
@@ -252,7 +268,7 @@
   height: 11.5rem;
   padding-bottom: 0.8rem;
   padding-right: 1.1rem;
-  padding-left: 1.4rem;
+  padding-left: 1rem;
 }
 @media screen and (min-width: 768px) {
   .musician__image {
@@ -271,8 +287,8 @@
 
 /* Added mdetails section for showing Musician's details */
 .mdetails {
-  padding-left: 1.4rem;
-  padding-right: 1.4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   color: #323232;
 }
 @media screen and (min-width: 768px) {
@@ -320,7 +336,7 @@
   font-size: 0.9rem;
   line-height: 1.4rem;
   font-weight: 600;
-  padding-top: 1.7rem;
+  padding-top: 1.5rem;
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
@@ -369,7 +385,7 @@
 -------------------------------------------------------------------------------*/
 .gallery {
   background-color: #FAFAFA;
-  padding-left: 1.4rem;
+  padding-left: 1rem;
 }
 @media screen and (min-width: 768px) {
   .gallery {
@@ -390,7 +406,7 @@
   }
 }
 .gallery__title {
-  padding: 1.7rem 1.4rem 1.3rem 0;
+  padding: 1.5rem 1rem 1.3rem 0;
   font-size: 1.6rem;
   line-height: 2rem;
   font-weight: 600;
@@ -433,13 +449,147 @@
 }
 
 /*-------------------------------------------------------------------------------
-    Added "Footer" section of site
+    Added "Join the Conversation" section 
+-------------------------------------------------------------------------------*/
+.conversation {
+  margin: 1rem;
+}
+.conversation__title {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+  color: #323232;
+}
+.conversation__container {
+  display: flex;
+  gap: 1rem;
+}
+.conversation__image {
+  margin-top: 1.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.form__button {
+  height: 2.5rem;
+  padding: 0 2rem;
+  border-radius: 4px;
+  background-color: #323232;
+  border-style: none;
+  color: #FFFFFF;
+  width: 100%;
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+.form__label {
+  margin: 4px;
+  color: #AFAFAF;
+  font-size: 0.7rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+.form__name {
+  height: 2.25rem;
+  border: 1px solid #AFAFAF;
+  border-radius: 4px;
+  background-color: #FAFAFA;
+  padding: 0.6rem;
+}
+.form__name:focus {
+  outline-color: #323232;
+}
+.form__name::-moz-placeholder {
+  color: #323232;
+}
+.form__name::placeholder {
+  color: #323232;
+}
+.form__name--error {
+  border: 1px solid #D22D2D;
+}
+.form__comment {
+  height: 5.5rem;
+  border: 1px solid #AFAFAF;
+  border-radius: 4px;
+  background-color: #FAFAFA;
+  padding: 0.6rem;
+}
+.form__comment:focus {
+  outline-color: #323232;
+}
+.form__comment::-moz-placeholder {
+  color: #323232;
+}
+.form__comment::placeholder {
+  color: #323232;
+}
+.form__comment--error {
+  border: 1px solid #D22D2D;
+}
+
+.comment {
+  margin-bottom: 1rem;
+}
+.comment__item {
+  list-style-type: none;
+}
+.comment__divider {
+  border: 1px solid #E1E1E1;
+}
+.comment__main-container {
+  display: flex;
+  gap: 1rem;
+}
+.comment__item-image {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background-color: #E1E1E1;
+  margin-top: 1rem;
+}
+.comment__sub-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 1rem 0;
+  gap: 0.6rem;
+}
+.comment__row {
+  display: flex;
+  justify-content: space-between;
+}
+.comment__item-name {
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  font-weight: 600;
+}
+.comment__item-date {
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  font-weight: 600;
+  color: #E1E1E1;
+}
+.comment__item-comment {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  font-weight: 400;
+}
+
+/*-------------------------------------------------------------------------------
+    Added "Footer" section of site 
 -------------------------------------------------------------------------------*/
 .footer {
   background-color: #323232;
   color: #FFFFFF;
-  padding-top: 0.5rem;
-  padding-left: 1.4rem;
+  padding-left: 1rem;
 }
 @media screen and (min-width: 768px) {
   .footer {
@@ -468,7 +618,7 @@
   }
 }
 .footer__title {
-  padding: 1.7rem 1.4rem 1rem 0;
+  padding: 1.5rem 1rem 0 0;
   font-size: 1.6rem;
   line-height: 2rem;
   font-weight: 600;
@@ -482,7 +632,6 @@
 }
 .footer__icons {
   padding-top: 0.3rem;
-  padding-bottom: 0.7rem;
   display: flex;
   -moz-column-gap: 2rem;
        column-gap: 2rem;
@@ -514,7 +663,7 @@
   --The Bees Knees Management, Limitless Artist Group, ARCH Entertainment */
 .fdetails__title {
   padding-bottom: 1rem;
-  padding-top: 1.1rem;
+  padding-top: 1rem;
   font-size: 0.8rem;
   line-height: 1.4rem;
   font-weight: 600;
@@ -527,8 +676,8 @@
   }
 }
 .fdetails__address {
-  padding-bottom: 1.2rem;
-  font-size: 0.7rem;
+  padding-bottom: 1rem;
+  font-size: 0.8rem;
   line-height: 1.1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -559,11 +708,11 @@
 /*Added copyright section for BandSite logo and copyright details */
 .copyright {
   width: 100%;
-  height: 9.5rem;
+  height: 8rem;
 }
 .copyright__logo {
   width: 7rem;
-  padding-top: 2.2rem;
+  padding-top: 2.8rem;
   padding-bottom: 0.8rem;
 }
 @media screen and (min-width: 768px) {
@@ -580,7 +729,7 @@
   }
 }
 .copyright__copy {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   line-height: 1.1rem;
   font-weight: 400;
 }

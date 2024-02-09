@@ -17,7 +17,7 @@
         <!--BandSite Logo-->
         <div class="header__logo-container">
             <a href="./index.html">
-                <img class="header__logo" alt="BandSiteLogo" src="./assets/logos/Logo-bandsite.svg" >
+                <img class="header__logo" alt="BandSiteLogo" src="./assets/logos/Logo-bandsite.svg">
             </a>
         </div>
 
@@ -41,7 +41,7 @@
         <div class="hero">
             <div class="hero__container">
                 <div class="hero__overlay"></div>
-                <img class="hero__image" alt="BeesImage" src="./assets/images/hero-bio.jpg" >
+                <img class="hero__image" alt="BeesImage" src="./assets/images/hero-bio.jpg">
                 <div class="hero__title">The Bees Knees</div>
             </div>
         </div>
@@ -52,7 +52,7 @@
 
             <div class="musician__title">About the Musicians</div>
 
-            <img class="musician__image" alt="MusicianImage" src="./assets/images/band.jpg" >
+            <img class="musician__image" alt="MusicianImage" src="./assets/images/band.jpg">
 
             <div class="mdetails">
                 <div class="mdetails__header">“We push each other to be the best. It’s not uncommon for one of us to
@@ -86,25 +86,49 @@
                 </div>
             </div>
 
+            <!--Added below section for adding Photos-->
             <div class="gallery">
                 <div class="gallery__title">Photo Gallery</div>
                 <div class="gallery__container">
 
-                    <img class="gallery__image" alt="PhotoGalleryImage1" src="./assets/images/Photo-gallery-1.jpg" >
-                    <img class="gallery__image" alt="PhotoGalleryImage2" src="./assets/images/Photo-gallery-2.jpg" >
-                    <img class="gallery__image" alt="PhotoGalleryImage3" src="./assets/images/Photo-gallery-3.jpg" >
+                    <img class="gallery__image" alt="PhotoGalleryImage1" src="./assets/images/Photo-gallery-1.jpg">
+                    <img class="gallery__image" alt="PhotoGalleryImage2" src="./assets/images/Photo-gallery-2.jpg">
+                    <img class="gallery__image" alt="PhotoGalleryImage3" src="./assets/images/Photo-gallery-3.jpg">
 
 
-                    <img class="gallery__image" alt="PhotoGalleryImage4" src="./assets/images/Photo-gallery-4.jpg" >
-                    <img class="gallery__image" alt="PhotoGalleryImage5" src="./assets/images/Photo-gallery-5.jpg" >
-                    <img class="gallery__image" alt="PhotoGalleryImage6" src="./assets/images/Photo-gallery-6.jpg" >
+                    <img class="gallery__image" alt="PhotoGalleryImage4" src="./assets/images/Photo-gallery-4.jpg">
+                    <img class="gallery__image" alt="PhotoGalleryImage5" src="./assets/images/Photo-gallery-5.jpg">
+                    <img class="gallery__image" alt="PhotoGalleryImage6" src="./assets/images/Photo-gallery-6.jpg">
 
-                    <img class="gallery__image" alt="PhotoGalleryImage7" src="./assets/images/Photo-gallery-7.jpg" >
-                    <img class="gallery__image" alt="PhotoGalleryImage8" src="./assets/images/Photo-gallery-8.jpg" >
-                    <img class="gallery__image" alt="PhotoGalleryImage9" src="./assets/images/Photo-gallery-9.jpg" >
+                    <img class="gallery__image" alt="PhotoGalleryImage7" src="./assets/images/Photo-gallery-7.jpg">
+                    <img class="gallery__image" alt="PhotoGalleryImage8" src="./assets/images/Photo-gallery-8.jpg">
+                    <img class="gallery__image" alt="PhotoGalleryImage9" src="./assets/images/Photo-gallery-9.jpg">
                 </div>
             </div>
         </div>
+
+        <!--Added section "Join the Conversation" for adding comments-->
+        <div class="conversation">
+            <div class="conversation__title">Join the Conversation</div>
+
+            <div class="conversation__container">
+                <img class="conversation__image" src="./assets/images/Mohan-muruge.jpg" alt="UserImage">
+
+                <form class="form" id="comment-form">
+                    <label class="form__label" for="name">NAME</label>
+                    <input class="form__name" type="text" name="name" id="name" placeholder="Enter your name" />
+                    <label class="form__label" for="comment">COMMENT</label>
+                    <textarea type="text" class="form__comment" name="comment" id="comment" resize="none"
+                        placeholder="Add a new comment"></textarea>
+                    <button class="form__button">COMMENT</button>
+                </form>
+            </div>
+
+            <!--Pupulate ui element dynamically in java script-->
+            <ui class="comment">
+            </ui>
+            <div class="comment__divider"></div>
+
     </main>
 
     <footer class="footer">
@@ -168,13 +192,13 @@
         <div class="copyright">
             <!--BandSite Logo-->
             <div class="copyright__logo-container">
-                <img class="copyright__logo" alt="BansiteLogo"  src="./assets/logos/Logo-bandsite.svg" >
+                <img class="copyright__logo" alt="BansiteLogo" src="./assets/logos/Logo-bandsite.svg">
             </div>
             <div class="copyright__copy">Copyright The Bees Knees © 2023 All Rights Reserved</div>
         </div>
 
     </footer>
-
+    <script src="./scripts/index-page.js"></script>
 </body>
 
 </html>

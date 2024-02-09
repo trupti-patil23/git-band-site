@@ -8,6 +8,8 @@ $secondary-dark-black: #000000;
 $secondary-mercury: #E1E1E1;
 $secondary-alabaster: #FAFAFA;
 
+$error-state-color:#D22D2D;
+
 /*Font Weights*/
 $avenir-regular: 400;
 $avenir-demi: 600;
@@ -18,8 +20,8 @@ $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
 
 /* Mobile(m): For Padding */
-$m-margin: 1.4rem;
-$m-padding-top: 1.7rem;
+$m-margin: 1rem;
+$m-padding-top: 1.5rem;
 $m-padding: 1rem;
 
 /* Tablet(dt): For Padding */

@@ -25,3 +25,52 @@
     line-height: $lineheight ;
     font-weight: $fontWeight;
 }
+
+/*-----------------------------------------------------------
+   Added common Mixins for Setting styling Button for site
+-----------------------------------------------------------*/
+@mixin set-button-style($screenType) {
+    height: 2.5rem;
+    padding: 0 2rem;
+    border-radius: 4px;
+    background-color: $primary-black;
+    border-style: none;
+    color: $primary-white;
+
+    @if($screenType =="Mobile") {
+        width: 100%;
+        @include set-font(0.9rem, 1.25rem, 600);
+    }
+}
+
+/*-----------------------------------------------------------
+   Added common Mixins for styling textbox and Textarea
+-----------------------------------------------------------*/
+@mixin set-form-feilds-style {  
+    border: 1px solid $primary-silver;
+    border-radius: 4px;
+    background-color: $secondary-alabaster;
+    padding: 0.6rem;
+
+    &:focus {
+        outline-color: $primary-black;
+    }
+
+    &::placeholder {
+        color: $primary-black;
+    }
+}
+
+/*-----------------------------------------------------------
+   Added common Mixins for styling images in 
+   "Join the Conversation" section
+-----------------------------------------------------------*/
+
+@mixin set-coversation-image-style($screenType) {
+
+    @if($screenType =="Mobile") {
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;       
+    }
+}
