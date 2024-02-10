@@ -37,7 +37,7 @@
     }
 
     @if($type =="NavigationMenu") {
-        @include set-font(1rem, 1.2rem, 400);       
+        @include set-font(0.9rem, 1.2rem, 600);       
     }
 }
 

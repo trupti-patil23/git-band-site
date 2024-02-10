@@ -29,8 +29,11 @@
     @if($type =="LabelFont") {
         @include set-font(0.7rem, 1.25rem, 600);
     }
-}
 
+    @if($type =="NavigationMenu") {
+        @include set-font(0.8rem, 1.1rem, 600);
+    }
+}
 
 /*-----------------------------------------------------------
    Added mixin for mobile padding styling for Band image 

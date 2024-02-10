@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shows</title>
+
+    <!-- Linking to the global.css stylesheet -->
+    <link rel="stylesheet" href="../styles/global.css">
+
+    <!-- Linking to the shows.css stylesheet -->
+    <link rel="stylesheet" href="../styles/shows.css">
+
+</head>
+
+<body>
+    <!--Include header.html -->
+    <div id="include-header"></div>
+
+    <!--Added main for sections :a. Hero image and heading, and soundcloud iframe track
+                                 b. Shows :list down available shows and buy tickets button-->
+    <main>
+        <!--Added main section  a. Hero image and heading(The Bees Knees) -->
+        <div class="hero">
+            <div class="hero__container">
+                <div class="hero__overlay"></div>
+                <img class="hero__image" alt="BeesImage" src="../assets/images/hero-shows.jpg">
+
+                <div class="hero__title-container">
+                    <div class="hero__subtitle">Beautiful Beasts Album </div>
+                    <div class="hero__title">Stripes of Yellow x For The Stings</div>
+                    <div>
+                        <iframe width="95%" height="80" scrolling="no"
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/573035961&color=%23d8252d&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--Include footer.html -->
+    <div id="include-footer"></div>
+
+    <script src="../scripts/build-shows-page.js"></script>
+</body>
+
+</html>

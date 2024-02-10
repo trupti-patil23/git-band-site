@@ -1,0 +1,345 @@
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: 700;
+}
+/* Primary Colors */
+/* Secondary Colors */
+/*Font Weights*/
+/*Tablet, Desktop breakpoint varibles*/
+/* Mobile(m): For Padding */
+/* Tablet(dt): For Padding */
+/*desktop: for padding*/
+/*Height of Hero image*/
+/*------------------------------------------------------- 
+   Added Mixins and media Queries for Tablet and 
+    Desktop breakpoints 
+  -------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added common Mixins for Setting Fonts of Band-Site
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added common Mixins for Setting styling Button for site
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added common Mixins for styling textbox and Textarea
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added common Mixins for styling images in 
+   "Join the Conversation" section
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added mixin for Setting Mobile Font Styling
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added mixin for mobile padding styling for Band image 
+   and Photo Gallery image
+-----------------------------------------------------------*/
+/* Added mixin for Setting Tablet and Desktop Font Styling */
+/*-----------------------------------------------------------
+   Added mixin for styling  Tablet: Hero Image
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added mixin for styling Tablet: Photo Gallery images
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added mixin for styling  Desktop: Hero Image
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added mixin for styling Tablet: Photo Gallery images
+-----------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "AvenirNext", sans-serif;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit; /* Inherits font from parent (body) */
+}
+
+/*-------------------------------------------------------------------------------
+    Added Selectors for Header, which includes styles for Mobile, Tablet 
+    and desktop
+  -------------------------------------------------------------------------------*/
+.header {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  gap: 0.5rem;
+  background-color: #323232;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  font-weight: 600;
+  /*For BandSite Logo*/
+}
+@media screen and (min-width: 768px) {
+  .header {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 2.2rem;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header {
+    width: 100%;
+    padding-left: 8rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__logo-container {
+    width: 28%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header__logo-container {
+    width: 15%;
+    padding-bottom: 0.4rem;
+  }
+}
+.header__logo {
+  width: 7rem;
+}
+
+/*For Navigation Bar(Biography, Shows)*/
+.nav {
+  width: 100%;
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    width: 100%;
+    gap: 3rem;
+    height: 4rem;
+    align-content: end;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .nav {
+    gap: 2rem;
+    height: 4rem;
+  }
+}
+.nav__menu {
+  width: 50%;
+  text-align: center;
+  padding-bottom: 0.6rem;
+}
+.nav__menu:active, .nav__menu:hover {
+  border-bottom: 3px solid #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .nav__menu {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-top: 1rem;
+  }
+}
+.nav__item {
+  width: 100%;
+  text-decoration: none;
+  color: #E1E1E1;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .nav__item {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    font-weight: 600;
+  }
+}
+.nav__item--active:active, .nav__item--active:hover {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+/*-------------------------------------------------------------------------------
+    Added "Footer" section of site 
+-------------------------------------------------------------------------------*/
+.footer {
+  background-color: #323232;
+  color: #FFFFFF;
+  padding-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-left: 2.2rem;
+    position: relative;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer {
+    padding-left: 8rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__container1 {
+    display: flex;
+    flex-direction: row;
+    gap: 2.3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__container2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 3rem;
+  }
+}
+.footer__title {
+  padding: 1.5rem 1rem 0 0;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .footer__title {
+    font-size: 2rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+  }
+}
+.footer__icons {
+  padding-top: 0.3rem;
+  display: flex;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__icons {
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+}
+.footer__instagram {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.footer__facebook {
+  width: 0.9rem;
+  height: 2.8rem;
+}
+.footer__twitter {
+  width: 1.8rem;
+  height: 2rem;
+}
+
+/*---Added fdetails section for showing (title,Address, email) for ----------
+  --The Bees Knees Management, Limitless Artist Group, ARCH Entertainment */
+.fdetails__title {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .fdetails__title {
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+  }
+}
+.fdetails__address {
+  padding-bottom: 1rem;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+@media screen and (min-width: 768px) {
+  .fdetails__address {
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+}
+.fdetails__email {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  font-weight: 400;
+  padding-bottom: 2.3rem;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .fdetails__email {
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+}
+
+/*Added copyright section for BandSite logo and copyright details */
+.copyright {
+  width: 100%;
+  height: 8rem;
+}
+.copyright__logo {
+  width: 7rem;
+  padding-top: 2.8rem;
+  padding-bottom: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .copyright__logo {
+    position: absolute;
+    left: 80%;
+    top: 1.3rem;
+    width: 7rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .copyright__logo {
+    width: 9rem;
+  }
+}
+.copyright__copy {
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .copyright__copy {
+    position: absolute;
+    left: 2.2rem;
+    top: 75%;
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .copyright__copy {
+    left: 8rem;
+  }
+}/*# sourceMappingURL=global.css.map */

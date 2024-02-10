@@ -1,0 +1,143 @@
+/* Primary Colors */
+/* Secondary Colors */
+/*Font Weights*/
+/*Tablet, Desktop breakpoint varibles*/
+/* Mobile(m): For Padding */
+/* Tablet(dt): For Padding */
+/*desktop: for padding*/
+/*Height of Hero image*/
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
+  font-weight: 700;
+}
+/*------------------------------------------------------- 
+   Added Mixins and media Queries for Tablet and 
+    Desktop breakpoints 
+  -------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added common Mixins for Setting Fonts of Band-Site
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added common Mixins for Setting styling Button for site
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added common Mixins for styling textbox and Textarea
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added common Mixins for styling images in 
+   "Join the Conversation" section
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added mixin for Setting Mobile Font Styling
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added mixin for mobile padding styling for Band image 
+   and Photo Gallery image
+-----------------------------------------------------------*/
+/* Added mixin for Setting Tablet and Desktop Font Styling */
+/*-----------------------------------------------------------
+   Added mixin for styling  Tablet: Hero Image
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added mixin for styling Tablet: Photo Gallery images
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added mixin for styling  Desktop: Hero Image
+-----------------------------------------------------------*/
+/*-----------------------------------------------------------
+   Added mixin for styling Tablet: Photo Gallery images
+-----------------------------------------------------------*/
+/*-------------------------------------------------------------------------------
+    Added Selectors for Main , which includes styles for Mobile, Tablet 
+    and desktop. It has below sections:
+    a. Hero image and heading(The Bees Knees), 
+    b. About the musicians
+    c. Photo Gallery
+  -------------------------------------------------------------------------------*/
+/* SECTION a:  Hero image and heading(The Bees Knees)*/
+.hero__container {
+  position: relative;
+  text-align: center;
+  height: 17rem;
+}
+@media screen and (min-width: 768px) {
+  .hero__container {
+    height: 28rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__container {
+    height: 40rem;
+  }
+}
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 50, 50, 0.5);
+  pointer-events: none;
+}
+.hero__image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .hero__image {
+    height: 28rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__image {
+    height: 40rem;
+  }
+}
+.hero__title-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  color: #FFFFFF;
+  margin-left: 1rem;
+  top: 10%;
+  gap: 1.4rem;
+  text-align: left;
+}
+.hero__subtitle {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  font-weight: 600;
+}
+.hero__title {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 600;
+  width: 75%;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    padding-left: 2.2rem;
+    top: 40%;
+    font-size: 3.5rem;
+    line-height: 4.25rem;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title {
+    padding-left: 8rem;
+    top: 45%;
+  }
+}/*# sourceMappingURL=shows.css.map */
