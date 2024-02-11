@@ -61,11 +61,10 @@
 /*-------------------------------------------------------------------------------
     Added Selectors for Main , which includes styles for Mobile, Tablet 
     and desktop. It has below sections:
-    a. Hero image and heading(The Bees Knees), 
-    b. About the musicians
-    c. Photo Gallery
+    a. Hero image and heading,subheading and SoundCloud track, 
+    b. Shows : It will list down shows, their timings and BUY TICKETS button
   -------------------------------------------------------------------------------*/
-/* SECTION a:  Hero image and heading(The Bees Knees)*/
+/* SECTION a:Hero image and heading,subheading and SoundCloud track */
 .hero__container {
   position: relative;
   text-align: center;
@@ -95,33 +94,23 @@
   height: 100%;
   background-size: cover;
 }
-@media screen and (min-width: 768px) {
-  .hero__image {
-    height: 28rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero__image {
-    height: 40rem;
-  }
-}
 .hero__title-container {
   display: flex;
   flex-direction: column;
   position: absolute;
   color: #FFFFFF;
   margin-left: 1rem;
-  top: 10%;
-  gap: 1.4rem;
+  top: 12%;
+  gap: 1.1rem;
   text-align: left;
 }
 .hero__subtitle {
-  font-size: 0.9rem;
-  line-height: 1.4rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  font-weight: 400;
 }
 .hero__title {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
   width: 75%;
@@ -140,4 +129,62 @@
     padding-left: 8rem;
     top: 45%;
   }
+}
+.hero__iframe {
+  width: 95%;
+}
+
+/*SECTION b. Shows : It will list down shows, their timings and BUY TICKETS button*/
+.shows {
+  margin-bottom: 1rem;
+}
+.shows__title {
+  margin-left: 1rem;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+.shows__item {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+.shows__item--hover {
+  background-color: aqua;
+}
+.shows__item--selected {
+  background-color: #E1E1E1;
+}
+.shows__label {
+  font-size: 0.7rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  color: #AFAFAF;
+  margin-left: 1rem;
+}
+.shows__value {
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+.shows__button {
+  height: 2.5rem;
+  padding: 0 2rem;
+  border-radius: 4px;
+  background-color: #323232;
+  border-style: none;
+  color: #FFFFFF;
+  width: 100%;
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  width: 90%;
+  margin-left: 1rem;
+}
+.shows__divider {
+  border: 1px solid #E1E1E1;
 }/*# sourceMappingURL=shows.css.map */

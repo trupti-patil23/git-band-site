@@ -3,22 +3,20 @@
 @use '../styles/partials/mixin-mobile' as *;
 @use '../styles/partials/mixin-desktop-tablet' as *;
 
-
 /*-------------------------------------------------------------------------------
     Added Selectors for Main , which includes styles for Mobile, Tablet 
     and desktop. It has below sections:
-    a. Hero image and heading(The Bees Knees), 
-    b. About the musicians
-    c. Photo Gallery
+    a. Hero image and heading,subheading and SoundCloud track, 
+    b. Shows : It will list down shows, their timings and BUY TICKETS button
   -------------------------------------------------------------------------------*/
 
-/* SECTION a:  Hero image and heading(The Bees Knees)*/
+/* SECTION a:Hero image and heading,subheading and SoundCloud track */
 
 .hero {
     &__container {
         position: relative;
-        text-align:center;     
-        height: $m-hero-image-height;   
+        text-align: center;
+        height: $m-hero-image-height;
 
         @include tablet {
             height: $t-hero-image-height;
@@ -40,35 +38,27 @@
     }
 
     &__image {
-        width: 100%;  
-        height:100%;   
+        width: 100%;
+        height: 100%;
         background-size: cover;
-
-        @include tablet {
-            height: $t-hero-image-height;
-        }
-
-        @include desktop {
-            height: $d-hero-image-height;
-        }
     }
 
     &__title-container {
-        display:flex;
-        flex-direction:column;
+        display: flex;
+        flex-direction: column;
         position: absolute;
         color: $primary-white;
         margin-left: $m-margin;
-        top: 10%;
-        gap:1.4rem;
+        top: 12%;
+        gap: 1.1rem;
         text-align: left;
     }
 
-    &__subtitle {        
-        @include set-mobile-font("SectionHeader");
+    &__subtitle {
+        @include set-mobile-font("BodyFont");
     }
 
-    &__title {               
+    &__title {
         @include set-mobile-font("PageHeader");
         width: 75%;
 
@@ -82,5 +72,57 @@
             padding-left: $desktop-margin;
             top: 45%;
         }
-    }   
+    }
+
+    &__iframe {
+        width: 95%;
+    }
+}
+
+/*SECTION b. Shows : It will list down shows, their timings and BUY TICKETS button*/
+.shows {
+    margin-bottom: $m-margin;
+
+    &__title {
+        margin-left: $m-margin;
+        margin-top: 2rem;
+        @include set-mobile-font("PageHeader");
+    }
+
+    &__item {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: $m-padding;
+
+        &--hover {
+            background-color:aqua;// $secondary-alabaster;
+        }
+
+        &--selected {
+            background-color: $secondary-mercury;
+        }
+    }
+
+    &__label {
+        @include set-mobile-font("LabelFont");
+        color: $primary-silver;
+        margin-left: $m-margin;
+    }
+
+    &__value {
+        @include set-mobile-font("SubHeader");
+        margin-left: $m-margin;
+    }
+
+    &__button {
+        @include set-button-style("Mobile");
+        width: 90%;
+        margin-left: $m-margin;
+    }
+
+    &__divider {
+        border: 1px solid $secondary-mercury;
+    }
 }

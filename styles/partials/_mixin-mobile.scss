@@ -7,7 +7,7 @@
 @mixin set-mobile-font($type) {
 
     @if($type =="PageHeader") {
-        @include set-font(1.6rem, 2rem, 600);
+        @include set-font(1.5rem, 2rem, 600);
     }
 
     @if($type =="SectionHeader") {
@@ -23,16 +23,12 @@
     }
 
     @if($type =="FooterFont") {
-        @include set-font(0.8rem, 1.1rem, 400);
+        @include set-font(0.7rem, 1.1rem, 400);
     }
 
     @if($type =="LabelFont") {
         @include set-font(0.7rem, 1.25rem, 600);
-    }
-
-    @if($type =="NavigationMenu") {
-        @include set-font(0.8rem, 1.1rem, 600);
-    }
+    }    
 }
 
 /*-----------------------------------------------------------
