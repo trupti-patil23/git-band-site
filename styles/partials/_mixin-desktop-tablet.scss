@@ -5,7 +5,7 @@
 @mixin set-desktop-tablet-font($type) {
 
     @if($type =="PageHeader") {
-        @include set-font(3.50rem, 4.25rem, 600);           
+        @include set-font(3.50rem, 4.25rem, 600);
     }
 
     @if($type =="SectionHeader") {
@@ -37,7 +37,11 @@
     }
 
     @if($type =="NavigationMenu") {
-        @include set-font(0.9rem, 1.2rem, 600);       
+        @include set-font(0.9rem, 1.2rem, 600);
+    }
+
+    @if($type =="LabelFont") {
+        @include set-font(0.8rem, 1.25rem, 600);
     }
 }
 
@@ -46,7 +50,7 @@
 -----------------------------------------------------------*/
 @mixin tablet-hero-image {
     width: 81%;
-    height: 20rem;   
+    height: 20rem;
     margin-left: 4.3rem;
 }
 
@@ -55,15 +59,15 @@
 -----------------------------------------------------------*/
 @mixin tablet-gallery-image {
     width: 10rem;
-    height: 9rem;   
-    padding: 0 1.5rem 1.5rem 0; 
-    flex: 0 0 calc(33.33% - 10px);   
+    height: 9rem;
+    padding: 0 1.5rem 1.5rem 0;
+    flex: 0 0 calc(33.33% - 10px);
 }
 
 /*-----------------------------------------------------------
    Added mixin for styling  Desktop: Hero Image
 -----------------------------------------------------------*/
-@mixin desktop-hero-image { 
+@mixin desktop-hero-image {
     width: 75%;
     height: 29.5rem;
     margin-left: 10rem;
@@ -73,9 +77,7 @@
    Added mixin for styling Tablet: Photo Gallery images
 -----------------------------------------------------------*/
 @mixin desktop-gallery-image {
-    height: 13rem;   
-    padding-bottom: 0 1.5rem 1.5rem 0; 
-    flex: 0 0 calc(33.33% - 10px);   
+    height: 13rem;
+    padding-bottom: 0 1.5rem 1.5rem 0;
+    flex: 0 0 calc(33.33% - 10px);
 }
-
-

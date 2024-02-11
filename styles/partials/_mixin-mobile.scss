@@ -16,7 +16,7 @@
 
     @if($type =="SubHeader") {
         @include set-font(0.8rem, 1.4rem, 600);
-    }   
+    }
 
     @if($type =="BodyFont") {
         @include set-font(0.8rem, 1.1rem, 400);
@@ -28,7 +28,7 @@
 
     @if($type =="LabelFont") {
         @include set-font(0.7rem, 1.25rem, 600);
-    }    
+    }
 }
 
 /*-----------------------------------------------------------

@@ -133,7 +133,7 @@
     }
 
     &__header-subline {
-        padding-top: 0.3rem;
+        padding-top: 0.5rem;
 
         @include tablet {
             @include set-desktop-tablet-font("HeadSubline");
@@ -241,19 +241,36 @@
 .conversation {
     margin: $m-margin;
 
+    @include tablet {
+        margin: $dt-margin;
+    }
+
     &__title {
         @include set-mobile-font("PageHeader");
         color: $primary-black;
+
+        @include tablet {
+            @include set-desktop-tablet-font("SectionHeader");
+            padding: 1rem 0 1.3rem 0;
+        }
     }
 
     &__container {
         display: flex;
         gap: 1rem;
+
+        @include tablet {            
+            margin: 0 3.6rem;
+        }
     }
 
     &__image {
-       margin-top: $m-padding-top;
-       @include set-coversation-image-style("Mobile");
+        margin-top: $m-padding-top;
+        @include set-coversation-image-style("Mobile");
+
+        @include tablet {
+            @include set-coversation-image-style("TabletDesktop");
+        }
     }
 }
 
@@ -265,18 +282,34 @@
     &__button {
         @include set-button-style("Mobile");
         margin: 1rem 0;
+
+        @include tablet {
+            margin: 1.5rem 0;
+            @include set-button-style("TabletDesktop")
+        }
     }
 
     &__label {
         margin: 4px;
         color: $primary-silver;
+        margin-top:0.8rem; 
+
         @include set-mobile-font("LabelFont");
+
+        @include tablet {
+            @include set-desktop-tablet-font("LabelFont");
+        }
     }
 
     &__name {
         height: 2.25rem;
-        @include set-form-feilds-style;   
-        
+        @include set-form-feilds-style;       
+
+        @include tablet {
+            height: 3rem;
+            margin-bottom: 1rem;
+        }
+
         &--error {
             border: 1px solid $error-state-color;
         }
@@ -285,7 +318,7 @@
     &__comment {
         height: 5.5rem;
         @include set-form-feilds-style;
-        
+
         &--error {
             border: 1px solid $error-state-color;
         }
@@ -294,48 +327,70 @@
 
 .comment {
     margin-bottom: 1rem;
-    &__item{        
+
+    &__item {
         list-style-type: none;
-    }
-    &__divider{
-        border: 1px solid $secondary-mercury;             
+
+        @include tablet {
+            margin: 0 3.6rem;
+        }
     }
 
-    &__main-container{        
-        display:flex;        
-        gap:1rem;
+    &__divider {
+        border: 1px solid $secondary-mercury;
     }
 
-    &__item-image{
+    &__last-divider {
+        border: 1px solid $secondary-mercury;
+
+        @include tablet {
+            margin: 0 3.6rem;
+        }
+    }
+
+    &__main-container {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__item-image {
         @include set-coversation-image-style("Mobile");
-        background-color: $secondary-mercury; 
-        margin-top: 1rem;   
+        background-color: $secondary-mercury;
+        margin-top: 1rem;
+
+        @include tablet {
+            @include set-coversation-image-style("TabletDesktop");
+        }
     }
 
     &__sub-container {
-        display:flex;  
-        flex-direction: column; 
-        width:80%;
-        margin: 1rem 0;   
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 1rem 0;
         gap: 0.6rem;
+
+        @include tablet {
+            width:90%;
+        }
     }
 
     &__row {
-        display:flex;  
-        justify-content: space-between;   
+        display: flex;
+        justify-content: space-between;
     }
 
-    &__item-name{
+    &__item-name {
         @include set-mobile-font("SubHeader");
     }
 
-    &__item-date{
+    &__item-date {
         @include set-mobile-font("SubHeader");
-        color:$secondary-mercury;
+        color: $primary-silver;
+        font-weight: 400;
     }
 
-    &__item-comment{
+    &__item-comment {
         @include set-mobile-font("BodyFont");
     }
 }
-

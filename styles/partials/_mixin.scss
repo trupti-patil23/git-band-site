@@ -36,17 +36,23 @@
     background-color: $primary-black;
     border-style: none;
     color: $primary-white;
+    @include set-font(0.9rem, 1.25rem, 600);
 
     @if($screenType =="Mobile") {
-        width: 100%;
-        @include set-font(0.9rem, 1.25rem, 600);
+        width: 100%;        
+    }
+
+    @if($screenType =="TabletDesktop") {
+        width: 30%;
+        align-self: flex-end;
+        background-color: $secondary-dark-black;       
     }
 }
 
 /*-----------------------------------------------------------
    Added common Mixins for styling textbox and Textarea
 -----------------------------------------------------------*/
-@mixin set-form-feilds-style {  
+@mixin set-form-feilds-style {
     border: 1px solid $primary-silver;
     border-radius: 4px;
     background-color: $secondary-alabaster;
@@ -71,6 +77,12 @@
     @if($screenType =="Mobile") {
         width: 2.25rem;
         height: 2.25rem;
-        border-radius: 50%;       
+        border-radius: 50%;
+    }
+
+    @if($screenType =="TabletDesktop") {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
     }
 }

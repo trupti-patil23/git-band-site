@@ -51,7 +51,7 @@ function displayShowDetailsArray() {
         const divChild1 = document.createElement("div");
         liElement.appendChild(divChild1);
 
-        //Created <span> element : <span class="shows__label">DATE</span>
+        //Created <div> element : <div class="shows__label">DATE</div>
         const dateLabel = document.createElement("div");
         dateLabel.innerText = "DATE";
         dateLabel.classList.add("shows__label");
@@ -69,7 +69,7 @@ function displayShowDetailsArray() {
         const divChild2 = document.createElement("div");
         liElement.appendChild(divChild2);
 
-        //Created <span> element : <span class="shows__label">VENUE</span>
+        //Created <div> element : <div class="shows__label">VENUE</div>
         const venueLabel = document.createElement("div");
         venueLabel.innerText = "VENUE";
         venueLabel.classList.add("shows__label");
@@ -87,7 +87,7 @@ function displayShowDetailsArray() {
         const divChild3 = document.createElement("div");
         liElement.appendChild(divChild3);
 
-        //Created <span> element : <span class="shows__label">LOCATION</span>
+        //Created <div> element : <div class="shows__label">LOCATION</div>
         const locationLabel = document.createElement("div");
         locationLabel.innerText = "LOCATION";
         locationLabel.classList.add("shows__label");
