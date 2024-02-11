@@ -19,18 +19,18 @@ let defaultCommentsArray = [
     }
 ];
 
-const uiElement = document.querySelector(".comment");
+const ulElement = document.querySelector(".comment");
 
 /**
  * This function shows default comments from default array.
  */
 function displayDefaultCommentsArray() {
-    uiElement.textContent = "";
+    ulElement.textContent = ""; 
     for (let i = 0; i < defaultCommentsArray.length; i++) {
         //created li element :<li class="comment__item">
         const liElement = document.createElement("li");
         liElement.classList.add("comment__item");
-        uiElement.appendChild(liElement);
+        ulElement.appendChild(liElement);
 
         //created div element: <div class="comment__divider">
         const liChild1 = document.createElement("div");

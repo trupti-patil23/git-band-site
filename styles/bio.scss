@@ -49,6 +49,7 @@
 
         @include desktop {
             height: $d-hero-image-height;
+
         }
     }
 
@@ -245,6 +246,10 @@
         margin: $dt-margin;
     }
 
+    @include desktop {
+        margin-left: $desktop-margin;
+    }
+
     &__title {
         @include set-mobile-font("PageHeader");
         color: $primary-black;
@@ -259,8 +264,12 @@
         display: flex;
         gap: 1rem;
 
-        @include tablet {            
+        @include tablet {
             margin: 0 3.6rem;
+        }
+
+        @include desktop {
+            margin: 0 10rem 0 14rem;
         }
     }
 
@@ -279,6 +288,10 @@
     display: flex;
     flex-direction: column;
 
+    @include desktop {
+        width: 60%;
+    }
+
     &__button {
         @include set-button-style("Mobile");
         margin: 1rem 0;
@@ -287,12 +300,16 @@
             margin: 1.5rem 0;
             @include set-button-style("TabletDesktop")
         }
+
+        @include desktop {
+            width: 34%;
+        }
     }
 
     &__label {
         margin: 4px;
         color: $primary-silver;
-        margin-top:0.8rem; 
+        margin-top: 0.8rem;
 
         @include set-mobile-font("LabelFont");
 
@@ -301,9 +318,9 @@
         }
     }
 
-    &__name {
+    &__name {      
         height: 2.25rem;
-        @include set-form-feilds-style;       
+        @include set-form-feilds-style;
 
         @include tablet {
             height: 3rem;
@@ -334,6 +351,11 @@
         @include tablet {
             margin: 0 3.6rem;
         }
+
+        @include desktop {
+            margin: 0 14rem;
+            width: 45%;
+        }
     }
 
     &__divider {
@@ -345,6 +367,11 @@
 
         @include tablet {
             margin: 0 3.6rem;
+        }
+
+        @include desktop {
+            margin-left: 14rem;
+            width: 45%;
         }
     }
 
@@ -371,7 +398,7 @@
         gap: 0.6rem;
 
         @include tablet {
-            width:90%;
+            width: 90%;
         }
     }
 

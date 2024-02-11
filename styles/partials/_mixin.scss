@@ -39,13 +39,13 @@
     @include set-font(0.9rem, 1.25rem, 600);
 
     @if($screenType =="Mobile") {
-        width: 100%;        
+        width: 100%;
     }
 
     @if($screenType =="TabletDesktop") {
         width: 30%;
         align-self: flex-end;
-        background-color: $secondary-dark-black;       
+        background-color: $secondary-dark-black;
     }
 }
 

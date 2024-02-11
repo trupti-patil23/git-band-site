@@ -132,6 +132,7 @@
 }
 .hero__iframe {
   width: 95%;
+  height: 6rem;
 }
 
 /*SECTION b. Shows : It will list down shows, their timings and BUY TICKETS button*/
@@ -153,7 +154,7 @@
   padding-top: 1rem;
 }
 .shows__item--hover {
-  background-color: aqua;
+  background-color: #FAFAFA;
 }
 .shows__item--selected {
   background-color: #E1E1E1;

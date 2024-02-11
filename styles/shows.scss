@@ -76,6 +76,7 @@
 
     &__iframe {
         width: 95%;
+        height:6rem;
     }
 }
 
@@ -97,7 +98,7 @@
         padding-top: $m-padding;
 
         &--hover {
-            background-color:aqua;// $secondary-alabaster;
+            background-color:$secondary-alabaster;
         }
 
         &--selected {

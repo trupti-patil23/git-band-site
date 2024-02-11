@@ -350,6 +350,11 @@
     margin: 2.2rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .conversation {
+    margin-left: 8rem;
+  }
+}
 .conversation__title {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -373,6 +378,11 @@
     margin: 0 3.6rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .conversation__container {
+    margin: 0 10rem 0 14rem;
+  }
+}
 .conversation__image {
   margin-top: 1.5rem;
   width: 2.25rem;
@@ -391,6 +401,11 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 1280px) {
+  .form {
+    width: 60%;
+  }
 }
 .form__button {
   height: 2.5rem;
@@ -420,6 +435,11 @@
     width: 30%;
     align-self: flex-end;
     background-color: #000000;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .form__button {
+    width: 34%;
   }
 }
 .form__label {
@@ -493,6 +513,12 @@
     margin: 0 3.6rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .comment__item {
+    margin: 0 14rem;
+    width: 45%;
+  }
+}
 .comment__divider {
   border: 1px solid #E1E1E1;
 }
@@ -502,6 +528,12 @@
 @media screen and (min-width: 768px) {
   .comment__last-divider {
     margin: 0 3.6rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment__last-divider {
+    margin-left: 14rem;
+    width: 45%;
   }
 }
 .comment__main-container {

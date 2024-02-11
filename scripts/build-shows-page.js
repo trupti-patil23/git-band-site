@@ -38,13 +38,13 @@ let showDetailsArray = [
  * and displayed on HTML page
  */
 function displayShowDetailsArray() {
-    const uiElement = document.querySelector(".shows__list");
+    const ulElement = document.querySelector(".shows__list");
 
     for (let i = 0; i < showDetailsArray.length; i++) {
         //Created <li> element : <li class="shows__item">
         const liElement = document.createElement("li");
         liElement.classList.add("shows__item");
-        uiElement.appendChild(liElement);
+        ulElement.appendChild(liElement);
 
         //Created <div> element -----------------DATE---------------------------------
 
