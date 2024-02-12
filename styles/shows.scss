@@ -58,7 +58,7 @@
         }
 
         @include desktop {
-            margin-left:$desktop-margin;
+            margin-left: $desktop-margin;
             margin-top: 7.6rem;
         }
     }
@@ -80,7 +80,7 @@
         }
 
         @include desktop {
-            width:55%;
+            width: 55%;
         }
     }
 
@@ -98,8 +98,8 @@
             position: absolute;
             top: 2.4rem;
             left: 66%;
-            width:48%;
-        }        
+            width: 48%;
+        }
     }
 }
 
@@ -107,8 +107,18 @@
 .shows {
     margin-bottom: $m-margin;
 
+    @include desktop {
+        display: flex;
+        gap: 7rem;
+    }
+
     &__list {
         padding: 0;
+
+        @include desktop {
+            padding-top: $desktop-padding-top;
+            width: 67%;
+        }
     }
 
     &__title {
@@ -119,6 +129,12 @@
         @include tablet {
             padding-left: $dt-margin;
             @include set-desktop-tablet-font("SectionHeader");
+        }
+
+        @include desktop {
+            padding: 0;
+            margin-left: $desktop-margin;
+            margin-top: $desktop-padding-top;
         }
     }
 
@@ -139,6 +155,12 @@
             padding-bottom: 0.8rem;
             border-bottom: 1px solid $secondary-mercury;
             margin: 0 1rem;
+        }
+
+        @include desktop {
+            justify-content: flex-start;
+            padding-left: 1.2rem;
+            gap: 1.4rem;
         }
 
         &--hover {
@@ -180,6 +202,11 @@
             margin-left: 3.4rem;
             margin-bottom: 0.5rem;
         }
+
+        @include desktop {
+            gap: 9rem;
+            margin-bottom: 1rem
+        }
     }
 
     &__label {
@@ -193,8 +220,25 @@
     }
 
     &__value {
-        @include set-mobile-font("SubHeader");
+        @include set-mobile-font("BodyFont");
         margin-left: $m-margin;
+        color: $secondary-dark-black;
+
+        @include tablet {
+            @include set-desktop-tablet-font("BodyFont");
+        }
+    }
+
+    &__date-value {
+        @include set-mobile-font("BodyFont");
+        margin-left: $m-margin;
+        font-weight: 600;
+
+        @include tablet {
+            @include set-desktop-tablet-font("BodyFont");
+            font-weight: 600;
+        }
+
     }
 
     &__button {
@@ -205,13 +249,18 @@
         @include tablet {
             width: 22%;
         }
+
+        @include desktop {
+            width: 20%;
+            margin-left: 4rem;
+        }
     }
 
     &__divider {
         border: 1px solid $secondary-mercury;
 
         @include tablet {
-            display: none; 
+            display: none;
         }
     }
 }

@@ -40,23 +40,23 @@ let showDetailsArray = [
 function displayShowDetailsArray() {
     const ulElement = document.querySelector(".shows__list");
 
-        //Created <li>:for headers (DATE, VENUE, LOCATION) for tablet and desktop view
-        const headerLiElement = document.createElement("li");
-        headerLiElement.classList.add("shows__heading-label");
+    //Created <li>:for headers (DATE, VENUE, LOCATION) for tablet and desktop view
+    const headerLiElement = document.createElement("li");
+    headerLiElement.classList.add("shows__heading-label");
 
-        const headerDateElement = document.createElement("div");
-        headerDateElement.innerText="DATE";
-        headerLiElement.appendChild(headerDateElement);
+    const headerDateElement = document.createElement("div");
+    headerDateElement.innerText = "DATE";
+    headerLiElement.appendChild(headerDateElement);
 
-        const headerVenueElement = document.createElement("div");
-        headerVenueElement.innerText="VENUE";
-        headerLiElement.appendChild(headerVenueElement);
+    const headerVenueElement = document.createElement("div");
+    headerVenueElement.innerText = "VENUE";
+    headerLiElement.appendChild(headerVenueElement);
 
-        const headerLocElement = document.createElement("div");
-        headerLocElement.innerText="LOCATION";
-        headerLiElement.appendChild(headerLocElement);
+    const headerLocElement = document.createElement("div");
+    headerLocElement.innerText = "LOCATION";
+    headerLiElement.appendChild(headerLocElement);
 
-        ulElement.appendChild(headerLiElement);
+    ulElement.appendChild(headerLiElement);
 
     for (let i = 0; i < showDetailsArray.length; i++) {
         //Created <li> element : <li class="shows__item">
@@ -78,7 +78,7 @@ function displayShowDetailsArray() {
 
         //Created <div> element :<div class="shows__value">
         const dateValue = document.createElement("div");
-        dateValue.classList.add("shows__value");
+        dateValue.classList.add("shows__date-value");
         dateValue.innerText = showDetailsArray[i].date;
         divChild1.appendChild(dateValue);
 
