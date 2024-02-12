@@ -72,7 +72,7 @@
 }
 @media screen and (min-width: 768px) {
   .hero__container {
-    height: 28rem;
+    height: 30rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -104,10 +104,28 @@
   gap: 1.1rem;
   text-align: left;
 }
+@media screen and (min-width: 768px) {
+  .hero__title-container {
+    margin-left: 2.2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__title-container {
+    margin-left: 8rem;
+    margin-top: 7.6rem;
+  }
+}
 .hero__subtitle {
   font-size: 0.8rem;
   line-height: 1.1rem;
   font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .hero__subtitle {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
 }
 .hero__title {
   font-size: 1.5rem;
@@ -117,8 +135,6 @@
 }
 @media screen and (min-width: 768px) {
   .hero__title {
-    padding-left: 2.2rem;
-    top: 40%;
     font-size: 3.5rem;
     line-height: 4.25rem;
     font-weight: 600;
@@ -126,18 +142,35 @@
 }
 @media screen and (min-width: 1280px) {
   .hero__title {
-    padding-left: 8rem;
-    top: 45%;
+    width: 55%;
   }
 }
 .hero__iframe {
   width: 95%;
   height: 6rem;
 }
+@media screen and (min-width: 768px) {
+  .hero__iframe {
+    margin-top: 1.5rem;
+    width: 52%;
+    height: 8.7rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__iframe {
+    position: absolute;
+    top: 2.4rem;
+    left: 66%;
+    width: 48%;
+  }
+}
 
 /*SECTION b. Shows : It will list down shows, their timings and BUY TICKETS button*/
 .shows {
   margin-bottom: 1rem;
+}
+.shows__list {
+  padding: 0;
 }
 .shows__title {
   margin-left: 1rem;
@@ -146,6 +179,14 @@
   line-height: 2rem;
   font-weight: 600;
 }
+@media screen and (min-width: 768px) {
+  .shows__title {
+    padding-left: 2.2rem;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+  }
+}
 .shows__item {
   list-style-type: none;
   display: flex;
@@ -153,11 +194,55 @@
   gap: 1rem;
   padding-top: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .shows__item {
+    flex-direction: row;
+    padding: 0;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #E1E1E1;
+    margin: 0 1rem;
+  }
+}
 .shows__item--hover {
   background-color: #FAFAFA;
 }
 .shows__item--selected {
   background-color: #E1E1E1;
+}
+@media screen and (min-width: 768px) {
+  .shows__item-child1 {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .shows__item-child2 {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .shows__item-child3 {
+    width: 20%;
+  }
+}
+.shows__heading-label {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .shows__heading-label {
+    display: flex;
+    font-size: 0.8rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    justify-content: left;
+    color: #AFAFAF;
+    gap: 8.5rem;
+    margin-left: 3.4rem;
+    margin-bottom: 0.5rem;
+  }
 }
 .shows__label {
   font-size: 0.7rem;
@@ -165,6 +250,11 @@
   font-weight: 600;
   color: #AFAFAF;
   margin-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .shows__label {
+    display: none;
+  }
 }
 .shows__value {
   font-size: 0.8rem;
@@ -186,6 +276,16 @@
   width: 90%;
   margin-left: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .shows__button {
+    width: 22%;
+  }
+}
 .shows__divider {
   border: 1px solid #E1E1E1;
+}
+@media screen and (min-width: 768px) {
+  .shows__divider {
+    display: none;
+  }
 }/*# sourceMappingURL=shows.css.map */

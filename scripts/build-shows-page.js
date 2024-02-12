@@ -40,6 +40,24 @@ let showDetailsArray = [
 function displayShowDetailsArray() {
     const ulElement = document.querySelector(".shows__list");
 
+        //Created <li>:for headers (DATE, VENUE, LOCATION) for tablet and desktop view
+        const headerLiElement = document.createElement("li");
+        headerLiElement.classList.add("shows__heading-label");
+
+        const headerDateElement = document.createElement("div");
+        headerDateElement.innerText="DATE";
+        headerLiElement.appendChild(headerDateElement);
+
+        const headerVenueElement = document.createElement("div");
+        headerVenueElement.innerText="VENUE";
+        headerLiElement.appendChild(headerVenueElement);
+
+        const headerLocElement = document.createElement("div");
+        headerLocElement.innerText="LOCATION";
+        headerLiElement.appendChild(headerLocElement);
+
+        ulElement.appendChild(headerLiElement);
+
     for (let i = 0; i < showDetailsArray.length; i++) {
         //Created <li> element : <li class="shows__item">
         const liElement = document.createElement("li");
@@ -49,6 +67,7 @@ function displayShowDetailsArray() {
         //Created <div> element -----------------DATE---------------------------------
 
         const divChild1 = document.createElement("div");
+        divChild1.classList.add("shows__item-child1");
         liElement.appendChild(divChild1);
 
         //Created <div> element : <div class="shows__label">DATE</div>
@@ -67,6 +86,7 @@ function displayShowDetailsArray() {
         //Created <div> element -----------------VENUE------------------------------
 
         const divChild2 = document.createElement("div");
+        divChild2.classList.add("shows__item-child2");
         liElement.appendChild(divChild2);
 
         //Created <div> element : <div class="shows__label">VENUE</div>
@@ -85,6 +105,7 @@ function displayShowDetailsArray() {
         //Created <div> element -----------------LOCATION----------------------------
 
         const divChild3 = document.createElement("div");
+        divChild3.classList.add("shows__item-child3");
         liElement.appendChild(divChild3);
 
         //Created <div> element : <div class="shows__label">LOCATION</div>
@@ -107,7 +128,7 @@ function displayShowDetailsArray() {
         buttonChild4.classList.add("shows__button");
         liElement.appendChild(buttonChild4);
 
-        //Created <div> element:<div class="shows__divider"></divdiv>
+        //Created <div> element:<div class="shows__divider"></div>
         const divChild5 = document.createElement("div");
         divChild5.classList.add("shows__divider");
         liElement.appendChild(divChild5);

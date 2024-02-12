@@ -19,7 +19,7 @@
         height: $m-hero-image-height;
 
         @include tablet {
-            height: $t-hero-image-height;
+            height: 30rem;
         }
 
         @include desktop {
@@ -52,10 +52,23 @@
         top: 12%;
         gap: 1.1rem;
         text-align: left;
+
+        @include tablet {
+            margin-left: $dt-margin;
+        }
+
+        @include desktop {
+            margin-left:$desktop-margin;
+            margin-top: 7.6rem;
+        }
     }
 
     &__subtitle {
         @include set-mobile-font("BodyFont");
+
+        @include tablet {
+            @include set-desktop-tablet-font("SubHeader");
+        }
     }
 
     &__title {
@@ -63,20 +76,30 @@
         width: 75%;
 
         @include tablet {
-            padding-left: $dt-margin;
-            top: 40%;
             @include set-desktop-tablet-font("PageHeader");
         }
 
         @include desktop {
-            padding-left: $desktop-margin;
-            top: 45%;
+            width:55%;
         }
     }
 
     &__iframe {
         width: 95%;
-        height:6rem;
+        height: 6rem;
+
+        @include tablet {
+            margin-top: 1.5rem;
+            width: 52%;
+            height: 8.7rem;
+        }
+
+        @include desktop {
+            position: absolute;
+            top: 2.4rem;
+            left: 66%;
+            width:48%;
+        }        
     }
 }
 
@@ -84,10 +107,19 @@
 .shows {
     margin-bottom: $m-margin;
 
+    &__list {
+        padding: 0;
+    }
+
     &__title {
         margin-left: $m-margin;
         margin-top: 2rem;
         @include set-mobile-font("PageHeader");
+
+        @include tablet {
+            padding-left: $dt-margin;
+            @include set-desktop-tablet-font("SectionHeader");
+        }
     }
 
     &__item {
@@ -97,8 +129,20 @@
         gap: 1rem;
         padding-top: $m-padding;
 
+        @include tablet {
+            flex-direction: row;
+            padding: 0;
+            gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            padding-top: 1rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid $secondary-mercury;
+            margin: 0 1rem;
+        }
+
         &--hover {
-            background-color:$secondary-alabaster;
+            background-color: $secondary-alabaster;
         }
 
         &--selected {
@@ -106,10 +150,46 @@
         }
     }
 
+    &__item-child1 {
+        @include tablet {
+            width: 20%;
+        }
+    }
+
+    &__item-child2 {
+        @include tablet {
+            width: 20%;
+        }
+    }
+
+    &__item-child3 {
+        @include tablet {
+            width: 20%;
+        }
+    }
+
+    &__heading-label {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            @include set-desktop-tablet-font("LabelFont");
+            justify-content: left;
+            color: $primary-silver;
+            gap: 8.5rem;
+            margin-left: 3.4rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+
     &__label {
         @include set-mobile-font("LabelFont");
         color: $primary-silver;
         margin-left: $m-margin;
+
+        @include tablet {
+            display: none;
+        }
     }
 
     &__value {
@@ -121,9 +201,17 @@
         @include set-button-style("Mobile");
         width: 90%;
         margin-left: $m-margin;
+
+        @include tablet {
+            width: 22%;
+        }
     }
 
     &__divider {
         border: 1px solid $secondary-mercury;
+
+        @include tablet {
+            display: none; 
+        }
     }
 }
