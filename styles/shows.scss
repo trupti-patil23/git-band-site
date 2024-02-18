@@ -107,6 +107,10 @@
 .shows {
     margin-bottom: $m-margin;
 
+    @include tablet {
+        margin-bottom: 2.2rem;
+    }
+
     @include desktop {
         display: flex;
         gap: 7rem;
@@ -114,6 +118,7 @@
 
     &__list {
         padding: 0;
+        margin: 0;
 
         @include desktop {
             padding-top: $desktop-padding-top;
@@ -122,12 +127,12 @@
     }
 
     &__title {
-        margin-left: $m-margin;
-        margin-top: 2rem;
+        margin: 2rem 0 0.3rem $m-margin;
         @include set-mobile-font("PageHeader");
 
         @include tablet {
-            padding-left: $dt-margin;
+            margin-left: $dt-margin;
+            margin-top: 3rem;
             @include set-desktop-tablet-font("SectionHeader");
         }
 
@@ -147,20 +152,16 @@
 
         @include tablet {
             flex-direction: row;
-            padding: 0;
-            gap: 1.5rem;
-            justify-content: center;
+            gap: 1.9rem;
             align-items: center;
-            padding-top: 1rem;
-            padding-bottom: 0.8rem;
+            padding: 1rem 0 1rem 0.3rem;
             border-bottom: 1px solid $secondary-mercury;
             margin: 0 1rem;
         }
 
         @include desktop {
             justify-content: flex-start;
-            padding-left: 1.2rem;
-            gap: 1.4rem;
+            gap: 1.8rem;
         }
 
         &--hover {
@@ -172,19 +173,21 @@
         }
     }
 
-    &__item-child1 {
+    &__heading-item {
+        display: none;
+
         @include tablet {
-            width: 20%;
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            gap: 1.9rem;
+            align-items: center;
+            padding: 1rem 0 0.2rem 0.3rem;
+            margin: 0 1rem;
         }
     }
 
-    &__item-child2 {
-        @include tablet {
-            width: 20%;
-        }
-    }
-
-    &__item-child3 {
+    &__item-child {
         @include tablet {
             width: 20%;
         }
@@ -196,11 +199,9 @@
         @include tablet {
             display: flex;
             @include set-desktop-tablet-font("LabelFont");
-            justify-content: left;
             color: $primary-silver;
-            gap: 8.5rem;
-            margin-left: 3.4rem;
-            margin-bottom: 0.5rem;
+            width: 20%;
+            padding-left: 1rem;
         }
 
         @include desktop {
@@ -252,7 +253,7 @@
 
         @include desktop {
             width: 20%;
-            margin-left: 4rem;
+            margin-left: 3rem;
         }
     }
 
