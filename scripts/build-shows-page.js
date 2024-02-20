@@ -128,15 +128,15 @@ function displayShowDetailsArray() {
  */
 function setBgcolorAsPerState() {
     const rows = document.getElementsByClassName("shows__item");
+    let priorSelected = null;
     for (let i = 0; i < rows.length; i++) {
-        rows[i].addEventListener("click", (event) => {
-            for (let j = 0; j < rows.length; j++) {
-                if (rows[j].classList.contains("shows__item--selected")) {
-                    rows[j].classList.remove("shows__item--selected");
-                    break;
-                }
+        rows[i].addEventListener("click", function()  {            
+            let selectedItem =rows[i];          
+            if(priorSelected!=null) {
+                priorSelected.classList.remove("shows__item--selected");
             }
-            rows[i].classList.add("shows__item--selected");
+            selectedItem.classList.add("shows__item--selected");
+            priorSelected = selectedItem;            
         });
     }
 }
