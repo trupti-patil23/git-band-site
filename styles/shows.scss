@@ -16,7 +16,7 @@
     &__container {
         position: relative;
         text-align: center;
-        height: $m-hero-image-height;
+        height: $m-hero-image-height-shows;
 
         @include tablet {
             height: 30rem;

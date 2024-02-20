@@ -69,7 +69,7 @@
 .hero__container {
   position: relative;
   text-align: center;
-  height: 17rem;
+  height: 12rem;
 }
 @media screen and (min-width: 768px) {
   .hero__container {
@@ -92,18 +92,8 @@
 }
 .hero__image {
   width: 100%;
-  height: 17rem;
+  height: 100%;
   background-size: cover;
-}
-@media screen and (min-width: 768px) {
-  .hero__image {
-    height: 28rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero__image {
-    height: 40rem;
-  }
 }
 .hero__title {
   position: absolute;
@@ -135,7 +125,7 @@
       Musicians title,image and information abt "The Bees knees" band -
   -------------------------------------------------------------------------------*/
 .musician__title {
-  padding: 1.5rem 1rem 1rem 1rem;
+  padding: 1.5rem 1rem 0.8rem 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
@@ -156,7 +146,7 @@
 }
 .musician__image {
   width: 100%;
-  height: 11.5rem;
+  height: 11rem;
   padding-bottom: 0.8rem;
   padding-right: 1.1rem;
   padding-left: 1rem;
@@ -319,7 +309,7 @@
 }
 .gallery__image {
   width: 100%;
-  height: 11.5rem;
+  height: 11rem;
   padding-bottom: 0.8rem;
   padding-right: 1.1rem;
 }
@@ -445,7 +435,7 @@
 .form__label {
   margin: 4px;
   color: #AFAFAF;
-  margin-top: 0.8rem;
+  padding-top: 0.8rem;
   font-size: 0.7rem;
   line-height: 1.25rem;
   font-weight: 600;
@@ -504,7 +494,8 @@
 }
 
 .comment {
-  margin-bottom: 1rem;
+  margin: 0;
+  padding: 0;
 }
 .comment__item {
   list-style-type: none;
@@ -591,7 +582,6 @@
 .comment__like-delete {
   display: flex;
   justify-content: flex-start;
-  margin-top: 1rem;
 }
 .comment__like {
   width: 1.1rem;
@@ -600,7 +590,7 @@
 .comment__like-span {
   font-size: small;
   color: #000000;
-  width: 3.5rem;
+  width: 2.5rem;
   padding-top: 0.5rem;
 }
 .comment__delete {

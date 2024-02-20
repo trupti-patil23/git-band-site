@@ -64,7 +64,7 @@ function displayShowDetailsArray() {
         //Created <div> element :<div class="shows__value">
         const dateValue = document.createElement("div");
         dateValue.classList.add("shows__date-value");
-        dateValue.innerText = formatDate(showDetailsArray[i].date);        
+        dateValue.innerText = formatDate(showDetailsArray[i].date);
         liFirstChild.appendChild(dateValue);
 
         //--------------------------------------------------------------------------
