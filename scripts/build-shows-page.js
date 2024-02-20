@@ -1,37 +1,19 @@
-/**----------------------------------------------------------------------------------------
- * Declare default Array storing show details:Date ,venue, location
- -------------------------------------------------------------------------------------------*/
-let showDetailsArray = [
-    {
-        date: "Mon Sept 09 2024",
-        venue: "Ronald Lane",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Tue Sept 17 2024",
-        venue: "Pier 3 East",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Sat Oct 12 2024",
-        venue: "View Lounge",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Sat Nov 16 2024",
-        venue: "Hyatt Agency",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Fri Nov 29 2024",
-        venue: "Moscow Center",
-        location: "San Francisco, CA"
-    },
-    {
-        date: "Wed Dec 18 2024",
-        venue: "Press Club",
-        location: "San Francisco, CA"
-    }];
+import { BandSiteAPI } from "../scripts/band-site-api.js";
+import { BANDSITE_API_KEY, formatDate } from "../scripts/utils.js";
+
+const bandSiteApi = new BandSiteAPI(BANDSITE_API_KEY);
+
+
+let showDetailsArray = [];
+
+/**
+ * Added method to call getShows() method from BandSiteAPI
+ */
+async function getShowDetailsFromAPI() {
+    showDetailsArray = await bandSiteApi.getShows();
+    displayShowDetailsArray();
+    setBgcolorAsPerState();
+}
 
 /**
  * Added below function, for populating show details(date,venue,location) dynamically from array 
@@ -58,9 +40,10 @@ function displayShowDetailsArray() {
     const headerLocElement = document.createElement("div");
     headerLocElement.innerText = "LOCATION";
     headerLocElement.classList.add("shows__heading-label");
-    liHeaderElement.appendChild(headerLocElement);    
+    liHeaderElement.appendChild(headerLocElement);
 
     for (let i = 0; i < showDetailsArray.length; i++) {
+
         //Created <li> element : <li class="shows__item">
         const liElement = document.createElement("li");
         liElement.classList.add("shows__item");
@@ -81,7 +64,7 @@ function displayShowDetailsArray() {
         //Created <div> element :<div class="shows__value">
         const dateValue = document.createElement("div");
         dateValue.classList.add("shows__date-value");
-        dateValue.innerText = showDetailsArray[i].date;
+        dateValue.innerText = formatDate(showDetailsArray[i].date);        
         liFirstChild.appendChild(dateValue);
 
         //--------------------------------------------------------------------------
@@ -100,7 +83,7 @@ function displayShowDetailsArray() {
         //Created <div> element :<div class="shows__value">
         const venueValue = document.createElement("div");
         venueValue.classList.add("shows__value");
-        venueValue.innerText = showDetailsArray[i].venue;
+        venueValue.innerText = showDetailsArray[i].place;
         liSecondChild.appendChild(venueValue);
 
         //---------------------------------------------------------------------------
@@ -144,31 +127,19 @@ function displayShowDetailsArray() {
  * 
  */
 function setBgcolorAsPerState() {
-    const rows = document.querySelectorAll(".shows__item");
-    rows.forEach(row => {
-        row.addEventListener("click", function (event) {
-            rows.forEach(everyRow => {
-                if (everyRow.classList.contains("shows__item--selected")) {
-                    everyRow.classList.remove("shows__item--selected");
-                    return;
+    const rows = document.getElementsByClassName("shows__item");
+    for (let i = 0; i < rows.length; i++) {
+        rows[i].addEventListener("click", (event) => {
+            for (let j = 0; j < rows.length; j++) {
+                if (rows[j].classList.contains("shows__item--selected")) {
+                    rows[j].classList.remove("shows__item--selected");
+                    break;
                 }
-            });
-            row.classList.add("shows__item--selected");
+            }
+            rows[i].classList.add("shows__item--selected");
         });
-
-        row.addEventListener("mouseover", function (event) {
-            row.classList.add("shows__item--hover");
-        });
-        row.addEventListener("mouseout", function (event) {
-            row.classList.remove("shows__item--hover");
-        });
-    });
+    }
 }
 
-displayShowDetailsArray();
-
-setBgcolorAsPerState();
-
-
-
+getShowDetailsFromAPI();
 

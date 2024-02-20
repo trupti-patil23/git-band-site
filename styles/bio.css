@@ -484,6 +484,7 @@
 }
 .form__comment {
   height: 5.5rem;
+  resize: none;
   border: 1px solid #AFAFAF;
   border-radius: 4px;
   background-color: #FAFAFA;
@@ -586,4 +587,22 @@
   font-size: 0.8rem;
   line-height: 1.1rem;
   font-weight: 400;
+}
+.comment__like-delete {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+.comment__like {
+  width: 1.1rem;
+  margin-right: 0.2rem;
+}
+.comment__like-span {
+  font-size: small;
+  color: #000000;
+  width: 3.5rem;
+  padding-top: 0.5rem;
+}
+.comment__delete {
+  width: 0.7rem;
 }/*# sourceMappingURL=bio.css.map */

@@ -3,6 +3,7 @@ import { BANDSITE_API_KEY } from "./utils.js";
 
 const ulElement = document.querySelector(".comment");
 const form = document.getElementById("comment-form");
+const bandSiteApi = new BandSiteAPI(BANDSITE_API_KEY);
 let commentsArray = [];
 
 /**
@@ -10,8 +11,9 @@ let commentsArray = [];
  * BandSiteAPI instance with an api-key stored in global variable
  */
 async function getCommentsFromAPI() {
-    const bandSiteApi = new BandSiteAPI(BANDSITE_API_KEY);
     commentsArray = await bandSiteApi.getComments();
+    //Sort CommentsArray inorder from newest to oldest
+    commentsArray.sort((a, b) => (b.timestamp - a.timestamp));
     displayCommentsArray(commentsArray);
 }
 
@@ -53,34 +55,74 @@ function displayCommentDOM(comment) {
     liContainerChild.appendChild(subContainer);
 
     //created div element : <div class="comment__row">
-    const commentRow = document.createElement("div");
-    commentRow.classList.add("comment__row");
-    subContainer.appendChild(commentRow);
+    const commentNameDateRow = document.createElement("div");
+    commentNameDateRow.classList.add("comment__row");
+    subContainer.appendChild(commentNameDateRow);
 
     //created div element :<div class="comment__item-comment">
-    const itemComment = document.createElement("div");
-    itemComment.classList.add("comment__item-comment");
-    itemComment.innerText = comment.comment;
-    subContainer.appendChild(itemComment);
+    const commentRow = document.createElement("div");
+    commentRow.classList.add("comment__item-comment");
+    commentRow.innerText = comment.comment;
+    subContainer.appendChild(commentRow);
 
     //created div element: <div class="comment__item-name">
     const itemName = document.createElement("div");
     itemName.classList.add("comment__item-name");
     itemName.innerText = comment.name;
-    commentRow.appendChild(itemName);
+    commentNameDateRow.appendChild(itemName);
 
     //created div element: <div class="comment__item-date">
     const itemDate = document.createElement("div");
     itemDate.classList.add("comment__item-date");
     itemDate.innerText = new Date(comment.timestamp).toLocaleDateString();
-    commentRow.appendChild(itemDate);
+    commentNameDateRow.appendChild(itemDate);
+
+    //created div element : <div class="comment__like-delete">
+    const commentLikeDeleteRow = document.createElement("div");
+    commentLikeDeleteRow.classList.add("comment__like-delete");
+    subContainer.appendChild(commentLikeDeleteRow);
+
+    //created div element : <img class="comment__like">
+    const likeElement = document.createElement("img");
+    likeElement.classList.add("comment__like")
+    likeElement.setAttribute("src", "../assets/icons/SVG/icon-like.svg");
+    likeElement.setAttribute("alt", "Like");
+    likeElement.setAttribute("id", comment.id);
+    likeElement.addEventListener("click", (event) => likeComment(event));
+    commentLikeDeleteRow.appendChild(likeElement);
+
+    //Created Span element:<span class="comment__like-span">
+    const spanLikeElement = document.createElement("span");
+    spanLikeElement.classList.add("comment__like-span");
+    spanLikeElement.textContent = comment.likes;
+    spanLikeElement.setAttribute("id", comment.id);
+    commentLikeDeleteRow.appendChild(spanLikeElement);
+
+    //created div element : <img class="comment__delete">
+    const deleteElement = document.createElement("img");
+    deleteElement.classList.add("comment__delete");
+    deleteElement.setAttribute("src", "../assets/icons/SVG/icon-delete.svg");
+    deleteElement.setAttribute("alt", "Delete");
+    deleteElement.setAttribute("id", comment.id);
+    deleteElement.addEventListener("click", (event) => deleteComment(event));
+    commentLikeDeleteRow.appendChild(deleteElement);
+}
+
+async function likeComment(event) {
+    let response = await bandSiteApi.likeComment(event.target.id);
+    event.target.nextElementSibling.textContent = response.likes;
+}
+
+async function deleteComment(event) {
+    let response = await bandSiteApi.deleteComment(event.target.id);
+    getCommentsFromAPI();
 }
 
 /** ------------------------------------------------------------------------------------
  * Added EventListener on "comment-form", Below function get called , 
  * when you click on Comments button
  *--------------------------------------------------------------------------------------*/
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", async function (event) {
 
     event.preventDefault(); //prevent form from submitting 
     let returnFlag = false;
@@ -118,11 +160,11 @@ form.addEventListener("submit", function (event) {
     front of the commentsArray */
     let newComment = {
         name: name,
-        comment: comment,
-        timestamp: Date.now()
+        comment: comment
     };
-    commentsArray.unshift(newComment);
-    displayCommentsArray(commentsArray);
+
+    await bandSiteApi.postComment(newComment);
+    getCommentsFromAPI();
 
     // Resetting the form
     form.reset();
